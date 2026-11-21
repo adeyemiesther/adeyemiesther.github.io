@@ -796,22 +796,22 @@ var PLAIN={
 /* ---------- fetch helpers ---------- */
 function withTimeout(p,ms){return Promise.race([p,new Promise(function(_,rej){setTimeout(function(){rej(new Error('timeout'))},ms)})])}
 var PROXIES=[
-  function(u){return 'https://api.allorigins.win/raw?url='+encodeURIComponent(u)},
-  function(u){return 'https://corsproxy.io/?url='+encodeURIComponent(u)},
-  function(u){return 'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(u)}
+  function(u,json){return ['https://r.jina.ai/'+u,{headers:{'X-Return-Format':json?'text':'html'}}]},
+  function(u){return ['https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(u),{}]},
+  function(u){return ['https://api.allorigins.win/raw?url='+encodeURIComponent(u),{}]}
 ];
-function fetchText(u){
+function fetchText(u,json){
   var i=0;
   function next(){
     if(i>=PROXIES.length)return Promise.reject(new Error('fetch'));
-    var p=PROXIES[i++](u),t0=performance.now();
-    return withTimeout(fetch(p),20000).then(function(r){if(!r.ok)throw new Error('bad');return r.text().then(function(t){if(!t||t.length<200)throw new Error('empty');return {text:t,ms:Math.round(performance.now()-t0)}})}).catch(next);
+    var p=PROXIES[i++](u,json),t0=performance.now();
+    return withTimeout(fetch(p[0],p[1]),30000).then(function(r){if(!r.ok)throw new Error('bad');return r.text().then(function(t){if(!t||t.length<200)throw new Error('empty');return {text:t,ms:Math.round(performance.now()-t0)}})}).catch(next);
   }
   return next();
 }
 function runPSI(url,strategy){
   var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)+'&strategy='+strategy+'&category=performance&category=seo'+(SITE.psiKey?'&key='+SITE.psiKey:'');
-  return withTimeout(fetch(api).then(function(r){return r.json()}),60000).then(function(d){if(d.error||!d.lighthouseResult)throw new Error('psi');return d.lighthouseResult});
+  return withTimeout(fetch(api).then(function(r){return r.json()}),45000).then(function(d){if(d.error||!d.lighthouseResult)throw new Error('psi');return d.lighthouseResult});
 }
 
 /* ---------- store analysis (works without any API key) ---------- */
@@ -842,11 +842,11 @@ function analyse(html,url,ms){
   if(!q('meta[name="viewport"]')){tech-=20;add('high','Mobile','Not set up for mobile screens','Add a responsive viewport and mobile-friendly theme.')}
   if(scripts>35){tech-=20;add('high','Speed',scripts+' external scripts load on the homepage','Too many apps and scripts slow your store. Remove apps you don\'t use.')}
   else if(scripts>22){tech-=10;add('med','Speed',scripts+' external scripts load on the homepage','Review installed apps. Each one adds code that slows your store.')}
-  if(inlineKb>600){tech-=15;add('high','Speed','Homepage HTML is very heavy ('+inlineKb+' KB)','Reduce sections, inline code and app widgets on the homepage.')}
-  else if(inlineKb>300){tech-=7;add('med','Speed','Homepage HTML is heavy ('+inlineKb+' KB)','Trim unused sections and app code.')}
+  if(inlineKb>1000){tech-=15;add('high','Speed','Homepage HTML is very heavy ('+inlineKb+' KB)','Reduce sections, inline code and app widgets on the homepage.')}
+  else if(inlineKb>650){tech-=7;add('med','Speed','Homepage HTML is heavy ('+inlineKb+' KB)','Trim unused sections and app code.')}
   var lazy=imgs.filter(function(i){return i.getAttribute('loading')==='lazy'}).length;
   if(imgs.length>8&&lazy<imgs.length/3){tech-=8;add('med','Speed','Most images are not lazy-loaded','Lazy-load images below the fold so the first screen appears faster.')}
-  if(ms>4000){tech-=10;add('med','Speed','Store responded slowly in our test (about '+(ms/1000).toFixed(1)+' s)','Check heavy apps, redirects and theme code that slow the first load.')}
+  
   if(!q('link[rel*="icon"]')){tech-=4;add('low','Branding','No favicon found','Add a small logo icon so your store looks professional in browser tabs.')}
   // Conversion & trust
   var conv=100;
@@ -886,7 +886,7 @@ function startScan(url){
     var R=res[0],lh=res[1];
     if(!R&&!lh)throw new Error('none');
     if(!R)R={issues:[],scores:{},stats:{},shopify:false};
-    var after=(R.shopify?fetchText(url.replace(/\/$/,'').replace(/(https?:\/\/[^\/]+).*/,'$1')+'/products.json?limit=250').then(function(x){return analyseProducts(JSON.parse(x.text),R)}).catch(function(){return null}):Promise.resolve(null));
+    var after=(R.shopify?fetchText(url.replace(/\/$/,'').replace(/(https?:\/\/[^\/]+).*/,'$1')+'/products.json?limit=250',true).then(function(x){return analyseProducts(JSON.parse(x.text),R)}).catch(function(){return null}):Promise.resolve(null));
     return after.then(function(prod){
       clearInterval(tick);fill.style.width='100%';
       var rings=[],metrics=[];
@@ -899,7 +899,7 @@ function startScan(url){
         if(!lh)rings.push(['Technical',R.scores.Technical]);
         rings.push(['SEO',lh&&lh.categories.seo?Math.round((lh.categories.seo.score*100+R.scores.SEO)/2):R.scores.SEO]);
         rings.push(['Conversion',R.scores.Conversion]);
-        if(!metrics.length){metrics.push(['Page size',R.stats.size+' KB',R.stats.size>300?40:90]);metrics.push(['Scripts / apps',String(R.stats.scripts),R.stats.scripts>22?40:90]);metrics.push(['Images',String(R.stats.images),90]);metrics.push(['Response',(R.stats.ms/1000).toFixed(1)+' s',R.stats.ms>4000?40:R.stats.ms>2500?60:90])}
+        if(!metrics.length){metrics.push(['Page size',R.stats.size+' KB',R.stats.size>650?40:90]);metrics.push(['Scripts / apps',String(R.stats.scripts),R.stats.scripts>22?40:90]);metrics.push(['Images',String(R.stats.images),90]);metrics.push(['Store type',R.shopify?'Shopify':'Website',90])}
       }
       if(prod){rings.push(['Products',prod.score]);metrics.push(['Products found',String(prod.count),90])}
       if(rings.length<4&&lh&&R.scores.Technical!==undefined)rings.push(['Technical',R.scores.Technical]);
