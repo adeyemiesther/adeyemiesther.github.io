@@ -353,6 +353,7 @@ footer{background:#050505;color:#8A8A8A;padding:70px 0 30px}
 .wa-step .big{width:64px;height:64px;border-radius:18px;background:#25D366;display:grid;place-items:center;margin:0 auto 14px}
 .wa-step .btn{background:#25D366;color:#fff;box-shadow:0 12px 26px -12px rgba(37,211,102,.8)}
 .wa-step .btn:hover{background:#1EBE5A}
+.btn-ink-tt{background:#0A0A0A!important;color:#fff!important;box-shadow:none!important}
 .wa-wait{display:none;font-size:13.5px;color:var(--muted);margin-top:12px}
 @media (max-width:1050px){.brands{grid-template-columns:1fr 1fr}}
 @media (max-width:680px){.brands{grid-template-columns:1fr}}
@@ -403,7 +404,7 @@ body.printing #printArea{display:block}
           <input type="text" id="heroUrl" placeholder="Enter your store URL, e.g. yourstore.com" aria-label="Your store URL">
           <button class="btn btn-c" type="submit">Audit My Store Free →</button>
         </form>
-        <div class="hero-note"><span>Speed, SEO &amp; mobile scores</span><span>Results in about 60 seconds</span><span>Downloadable report</span></div>
+        <div class="hero-note"><span>SEO, speed, trust &amp; product scores</span><span>Results in about 60 seconds</span><span>Downloadable report</span></div>
       </div>
       <div class="founder rv">
         <div class="founder-card">
@@ -479,7 +480,7 @@ body.printing #printArea{display:block}
     <div class="head center rv">
       <span class="kicker"><i></i> Free store audit tool</span>
       <h2>How healthy is <span class="hl">your store?</span></h2>
-      <p class="sub">Enter your store link and we'll scan it with Google Lighthouse, the engine behind Google PageSpeed Insights. You'll see your scores instantly. Unlock and download the full report by sending us your details.</p>
+      <p class="sub">Enter your store link and we'll check its SEO, speed, trust, conversion and products. You'll see your scores instantly. Unlock and download the full report by sending us your details.</p>
     </div>
     <div class="audit-box rv">
       <div class="steps-mini"><div><b>1</b> Enter your store link</div><div><b>2</b> See your scores</div><div><b>3</b> Send your details to unlock</div><div><b>4</b> Download your full report</div></div>
@@ -522,9 +523,11 @@ body.printing #printArea{display:block}
               </div>
               <div class="gate-step wa-step" id="gs2">
                 <div class="big"><svg width="34" height="34" fill="#fff" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></div>
-                <h3>Step 2 of 2: Message us on WhatsApp</h3>
-                <p>Tap the button below. WhatsApp will open with your report summary already written. <b>Press send</b>, then come back here. Your full report and download unlock automatically.</p>
+                <h3>Step 2 of 2: Send us your result</h3>
+                <p>Message us on WhatsApp or TikTok. Your audit result is added to the message automatically. <b>Press send</b>, then come back here. Your full report and download unlock automatically.</p>
                 <button class="btn" type="button" id="waUnlock" style="width:100%">Send on WhatsApp to Unlock →</button>
+                <button class="btn btn-ink-tt" type="button" id="ttUnlock" style="width:100%;margin-top:10px">Send on TikTok to Unlock →</button>
+                <p class="wa-wait" id="ttNote">✅ Your audit result is copied. Paste it in a TikTok message to <b>@ade_esther12</b> and press send.</p>
                 <p class="wa-wait" id="waWait">Waiting for you to send the message… Come back to this page after sending.</p>
               </div>
             </div>
@@ -535,7 +538,7 @@ body.printing #printArea{display:block}
           <div><h4>✅ Report unlocked. Thank you!</h4><p>Download your report, or chat with us on WhatsApp to get these issues fixed.</p></div>
           <div class="btns"><button class="btn btn-w" id="dlBtn" type="button">⬇ Download PDF Report</button><a class="btn btn-c" id="waBtn" target="_blank" rel="noopener">Get These Fixed →</a></div>
         </div>
-        <p class="rep-note">Scores come from a single automated Google Lighthouse test and can vary between runs. They measure technical quality, not sales.</p>
+        <p class="rep-note">Scores come from an automated check of your store's public pages and can vary between runs. They highlight opportunities; they don't measure sales.</p>
       </div>
     </div>
   </div>
@@ -678,6 +681,7 @@ body.printing #printArea{display:block}
       <div class="cmethods">
         <a class="cm" href="https://wa.me/2348142826267?text=Hello%20Faith%20Great%20Digital%20Studio%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener"><div class="i"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></div><div><small>WhatsApp</small><b>0814 282 6267</b></div></a>
         <a class="cm" href="mailto:faithgreat2001@gmail.com"><div class="i"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><small>Email</small><b>faithgreat2001@gmail.com</b></div></a>
+        <a class="cm" href="https://www.tiktok.com/@ade_esther12" target="_blank" rel="noopener"><div class="i"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9a6.3 6.3 0 1 0 5.4 6.2V8.6a7.9 7.9 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8Z"/></svg></div><div><small>TikTok</small><b>@ade_esther12</b></div></a>
         <a class="cm" href="https://www.fiverr.com/inbox/adeyemiesthe604" target="_blank" rel="noopener"><div class="i" style="background:rgba(29,191,115,.18);color:#1DBF73;font-family:var(--h);font-weight:800;font-size:15px">fi</div><div><small>Fiverr</small><b>Message us on Fiverr</b></div></a>
         <div class="cm"><div class="i"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Response time</small><b>Within 24 hours</b></div></div>
       </div>
@@ -726,7 +730,7 @@ body.printing #printArea{display:block}
 <div id="printArea"></div>
 
 <script>
-var SITE={ whatsapp:'2348142826267', email:'faithgreat2001@gmail.com', psiKey:'' /* optional Google API key for higher audit limits */ };
+var SITE={ whatsapp:'2348142826267', email:'faithgreat2001@gmail.com', tiktok:'https://www.tiktok.com/@ade_esther12', psiKey:'' /* optional Google API key for higher audit limits */ };
 document.getElementById('ph2').src=document.querySelector('.founder-card img').src;
 document.getElementById('yr').textContent=new Date().getFullYear();
 document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
@@ -789,62 +793,145 @@ var PLAIN={
  'uses-http2':'Your server isn\'t using HTTP/2.'
 };
 
+/* ---------- fetch helpers ---------- */
+function withTimeout(p,ms){return Promise.race([p,new Promise(function(_,rej){setTimeout(function(){rej(new Error('timeout'))},ms)})])}
+var PROXIES=[
+  function(u){return 'https://api.allorigins.win/raw?url='+encodeURIComponent(u)},
+  function(u){return 'https://corsproxy.io/?url='+encodeURIComponent(u)},
+  function(u){return 'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(u)}
+];
+function fetchText(u){
+  var i=0;
+  function next(){
+    if(i>=PROXIES.length)return Promise.reject(new Error('fetch'));
+    var p=PROXIES[i++](u),t0=performance.now();
+    return withTimeout(fetch(p),20000).then(function(r){if(!r.ok)throw new Error('bad');return r.text().then(function(t){if(!t||t.length<200)throw new Error('empty');return {text:t,ms:Math.round(performance.now()-t0)}})}).catch(next);
+  }
+  return next();
+}
+function runPSI(url,strategy){
+  var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)+'&strategy='+strategy+'&category=performance&category=seo'+(SITE.psiKey?'&key='+SITE.psiKey:'');
+  return withTimeout(fetch(api).then(function(r){return r.json()}),60000).then(function(d){if(d.error||!d.lighthouseResult)throw new Error('psi');return d.lighthouseResult});
+}
+
+/* ---------- store analysis (works without any API key) ---------- */
+function analyse(html,url,ms){
+  var doc=new DOMParser().parseFromString(html,'text/html'),low=html.toLowerCase();
+  var q=function(s){return doc.querySelector(s)},qa=function(s){return [].slice.call(doc.querySelectorAll(s))};
+  var I=[],add=function(sev,area,title,fix){I.push({sev:sev,area:area,title:title,fix:fix})};
+  var has=function(){for(var k=0;k<arguments.length;k++)if(low.indexOf(arguments[k])>-1)return true;return false};
+  var shopify=has('cdn.shopify.com','shopify.theme','myshopify.com');
+  // SEO
+  var seo=100,title=(q('title')||{}).textContent||'',desc=(q('meta[name="description"]')||{getAttribute:function(){return ''}}).getAttribute('content')||'';
+  title=title.trim();desc=desc.trim();
+  if(!title){seo-=20;add('high','SEO','Homepage has no page title','Add a clear title with your brand and main product keyword (50–60 characters).')}
+  else if(title.length<20||title.length>70){seo-=8;add('med','SEO','Page title is '+(title.length<20?'too short':'too long')+' ('+title.length+' characters)','Rewrite it to 50–60 characters, including your main product keyword.')}
+  if(!desc){seo-=18;add('high','SEO','Missing meta description','Write a 140–160 character description so Google shows a strong snippet instead of random text.')}
+  else if(desc.length<70||desc.length>170){seo-=6;add('med','SEO','Meta description is '+(desc.length<70?'too short':'too long'),'Aim for 140–160 characters that sell the click.')}
+  var h1=qa('h1').length;
+  if(h1===0){seo-=12;add('high','SEO','No main heading (H1) on the homepage','Add one clear H1 that says what you sell.')}
+  else if(h1>1){seo-=5;add('med','SEO',h1+' main headings (H1) found','Use only one H1 per page so Google understands the main topic.')}
+  var imgs=qa('img'),noAlt=imgs.filter(function(i){return !(i.getAttribute('alt')||'').trim()}).length;
+  if(imgs.length&&noAlt/imgs.length>0.2){seo-=10;add(noAlt/imgs.length>0.5?'high':'med','SEO',noAlt+' of '+imgs.length+' images have no alt text','Add short descriptive alt text to images. It helps Google Images, SEO and accessibility.')}
+  if(!q('link[rel="canonical"]')){seo-=5;add('low','SEO','No canonical tag','Add a canonical tag to avoid duplicate-content issues.')}
+  if(!has('application/ld+json')){seo-=10;add('med','SEO','No structured data (schema) found','Add Product and Organization schema so Google and AI assistants can show rich results.')}
+  if(!q('meta[property="og:image"]')){seo-=6;add('med','SEO','No social share image (og:image)','Set a share image so your links look professional on WhatsApp, Facebook and Instagram.')}
+  // Technical / speed signals
+  var tech=100,scripts=qa('script[src]').length,inlineKb=Math.round(html.length/1024);
+  if(!/^https:/i.test(url)){tech-=20;add('high','Technical','Store is not using HTTPS','Turn on SSL so browsers don\'t show a "Not secure" warning.')}
+  if(!q('meta[name="viewport"]')){tech-=20;add('high','Mobile','Not set up for mobile screens','Add a responsive viewport and mobile-friendly theme.')}
+  if(scripts>35){tech-=20;add('high','Speed',scripts+' external scripts load on the homepage','Too many apps and scripts slow your store. Remove apps you don\'t use.')}
+  else if(scripts>22){tech-=10;add('med','Speed',scripts+' external scripts load on the homepage','Review installed apps. Each one adds code that slows your store.')}
+  if(inlineKb>600){tech-=15;add('high','Speed','Homepage HTML is very heavy ('+inlineKb+' KB)','Reduce sections, inline code and app widgets on the homepage.')}
+  else if(inlineKb>300){tech-=7;add('med','Speed','Homepage HTML is heavy ('+inlineKb+' KB)','Trim unused sections and app code.')}
+  var lazy=imgs.filter(function(i){return i.getAttribute('loading')==='lazy'}).length;
+  if(imgs.length>8&&lazy<imgs.length/3){tech-=8;add('med','Speed','Most images are not lazy-loaded','Lazy-load images below the fold so the first screen appears faster.')}
+  if(ms>4000){tech-=10;add('med','Speed','Store responded slowly in our test (about '+(ms/1000).toFixed(1)+' s)','Check heavy apps, redirects and theme code that slow the first load.')}
+  if(!q('link[rel*="icon"]')){tech-=4;add('low','Branding','No favicon found','Add a small logo icon so your store looks professional in browser tabs.')}
+  // Conversion & trust
+  var conv=100;
+  if(!has('judge.me','loox','yotpo','okendo','stamped','reviews.io','trustpilot','junip','product-reviews','rating')){conv-=20;add('high','Trust','No product reviews detected','Install a reviews app and show star ratings and customer photos.')}
+  if(!has('klaviyo','newsletter','subscribe','omnisend','privy','mailchimp','contact[email]')){conv-=18;add('high','Email','No email sign-up detected','Add an email/SMS sign-up with a welcome offer and connect it to Klaviyo flows.')}
+  if(!has('refund','return')){conv-=10;add('med','Trust','No returns/refund policy link found on the homepage','Link your returns policy in the footer and near "Add to cart".')}
+  if(!has('shipping','delivery')){conv-=8;add('med','Trust','Shipping information isn\'t visible on the homepage','Show delivery times and free-shipping thresholds clearly.')}
+  if(!has('whatsapp','tidio','gorgias','intercom','zendesk','crisp','tawk','livechat','inbox','chat')){conv-=8;add('med','Support','No live chat or WhatsApp button detected','Add WhatsApp or live chat so shoppers can ask questions before buying.')}
+  if(!has('instagram.com','tiktok.com','facebook.com')){conv-=6;add('low','Brand','No social media links found','Link your Instagram/TikTok to build trust and social proof.')}
+  if(shopify&&!has('shop pay','shop-pay','shopify-payment-button','dynamic-checkout')){conv-=8;add('med','Checkout','Express checkout buttons not detected','Turn on Shop Pay, Apple Pay and PayPal express buttons.')}
+  return {doc:doc,issues:I,shopify:shopify,scores:{SEO:Math.max(seo,5),Technical:Math.max(tech,5),Conversion:Math.max(conv,5)},stats:{scripts:scripts,images:imgs.length,size:inlineKb,ms:ms,title:title}};
+}
+function analyseProducts(json,R){
+  var ps=(json&&json.products)||[];if(!ps.length)return null;
+  var thin=ps.filter(function(p){return (p.body_html||'').replace(/<[^>]+>/g,'').trim().length<150}).length;
+  var oneImg=ps.filter(function(p){return (p.images||[]).length<3}).length;
+  var noAlt=0,tot=0;ps.forEach(function(p){(p.images||[]).forEach(function(i){tot++;if(!i.alt)noAlt++})});
+  var s=100;
+  if(thin/ps.length>0.3){s-=30;R.issues.push({sev:'high',area:'Products',title:thin+' of '+ps.length+' products have very short descriptions',fix:'Write benefit-led descriptions (150+ words) with sizing, materials and FAQs.'})}
+  if(oneImg/ps.length>0.3){s-=25;R.issues.push({sev:'high',area:'Products',title:oneImg+' of '+ps.length+' products have fewer than 3 photos',fix:'Add 4–6 photos per product: lifestyle, close-ups, scale and in-use shots.'})}
+  if(tot&&noAlt/tot>0.3){s-=15;R.issues.push({sev:'med',area:'Products',title:noAlt+' of '+tot+' product images have no alt text',fix:'Add alt text to product images for SEO and Google Shopping.'})}
+  if(ps.length<8){s-=10;R.issues.push({sev:'low',area:'Products','title':'Only '+ps.length+' products found',fix:'A thin catalogue can look less trustworthy. Consider bundles or related products.'})}
+  return {score:Math.max(s,5),count:ps.length};
+}
+
 function startScan(url){
   var strategy=document.querySelector('input[name=strategy]:checked').value;
   var err=document.getElementById('err'),st=document.getElementById('status'),fill=document.getElementById('barFill'),txt=document.getElementById('statusText');
   err.style.display='none';document.getElementById('report').style.display='none';
   st.classList.add('on');var p=5;fill.style.width='5%';
-  var msgs=['Loading your store…','Testing speed on '+strategy+'…','Checking SEO basics…','Checking mobile usability…','Looking for quick wins…','Almost there…'];
-  var mi=0;var tick=setInterval(function(){p=Math.min(p+Math.random()*6,92);fill.style.width=p+'%';if(Math.random()<.3&&mi<msgs.length-1){mi++;txt.textContent=msgs[mi]}},900);
-  txt.textContent=msgs[0];
-  var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)+'&strategy='+strategy+'&category=performance&category=seo&category=accessibility&category=best-practices'+(SITE.psiKey?'&key='+SITE.psiKey:'');
-  document.getElementById('scanBtn').disabled=true;
-  fetch(api).then(function(r){return r.json()}).then(function(d){
-    clearInterval(tick);fill.style.width='100%';
-    if(d.error||!d.lighthouseResult)throw new Error(d.error&&d.error.message||'scan');
-    build(d.lighthouseResult,url,strategy);
-  }).catch(function(e){
+  var msgs=['Loading your store…','Checking SEO basics…','Checking trust & conversion…','Reviewing products…','Testing speed with Google…','Almost there…'];
+  var mi=0;var tick=setInterval(function(){p=Math.min(p+Math.random()*5,93);fill.style.width=p+'%';if(Math.random()<.3&&mi<msgs.length-1){mi++;txt.textContent=msgs[mi]}},900);
+  txt.textContent=msgs[0];document.getElementById('scanBtn').disabled=true;
+  var psi=runPSI(url,strategy).catch(function(){return null});
+  var page=fetchText(url).then(function(r){return analyse(r.text,url,r.ms)}).catch(function(){return null});
+  Promise.all([page,psi]).then(function(res){
+    var R=res[0],lh=res[1];
+    if(!R&&!lh)throw new Error('none');
+    if(!R)R={issues:[],scores:{},stats:{},shopify:false};
+    var after=(R.shopify?fetchText(url.replace(/\/$/,'').replace(/(https?:\/\/[^\/]+).*/,'$1')+'/products.json?limit=250').then(function(x){return analyseProducts(JSON.parse(x.text),R)}).catch(function(){return null}):Promise.resolve(null));
+    return after.then(function(prod){
+      clearInterval(tick);fill.style.width='100%';
+      var rings=[],metrics=[];
+      if(lh){
+        var perf=Math.round((lh.categories.performance.score||0)*100);rings.push(['Speed',perf]);
+        [['first-contentful-paint','First paint'],['largest-contentful-paint','Main content'],['total-blocking-time','Blocking time'],['speed-index','Speed index']].forEach(function(m){var x=lh.audits[m[0]];if(x)metrics.push([m[1],x.displayValue,Math.round((x.score||0)*100)])});
+        Object.keys(lh.audits).forEach(function(id){var x=lh.audits[id];if(PLAIN[id]&&x.score!==null&&x.score<0.9&&['manual','notApplicable','informative'].indexOf(x.scoreDisplayMode)<0)R.issues.push({sev:x.score<0.5?'high':'med',area:'Speed',title:clean(x.title),fix:PLAIN[id]})});
+      }
+      if(R.scores.SEO!==undefined){
+        if(!lh)rings.push(['Technical',R.scores.Technical]);
+        rings.push(['SEO',lh&&lh.categories.seo?Math.round((lh.categories.seo.score*100+R.scores.SEO)/2):R.scores.SEO]);
+        rings.push(['Conversion',R.scores.Conversion]);
+        if(!metrics.length){metrics.push(['Page size',R.stats.size+' KB',R.stats.size>300?40:90]);metrics.push(['Scripts / apps',String(R.stats.scripts),R.stats.scripts>22?40:90]);metrics.push(['Images',String(R.stats.images),90]);metrics.push(['Response',(R.stats.ms/1000).toFixed(1)+' s',R.stats.ms>4000?40:R.stats.ms>2500?60:90])}
+      }
+      if(prod){rings.push(['Products',prod.score]);metrics.push(['Products found',String(prod.count),90])}
+      if(rings.length<4&&lh&&R.scores.Technical!==undefined)rings.push(['Technical',R.scores.Technical]);
+      render(url,strategy,rings.slice(0,4),metrics.slice(0,5),R.issues,R.shopify);
+    });
+  }).catch(function(){
     clearInterval(tick);
-    err.innerHTML='We couldn\'t scan that store right now. Check the link is correct and public, then try again in a minute. If it keeps failing, <a href="https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent('Hello, I tried the free audit for '+url+' but it did not load. Can you audit my store?')+'" target="_blank" rel="noopener">message us on WhatsApp</a> and we\'ll audit it manually.';
+    err.innerHTML='We couldn\'t reach that store right now. Check the link is correct and public, then try again. If it keeps failing, <a href="https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent('Hello Faith Great Digital Studio, I tried the free audit for '+url+' but it did not load. Can you audit my store?')+'" target="_blank" rel="noopener">message us on WhatsApp</a> and we\'ll audit it manually for free.';
     err.style.display='block';
   }).finally(function(){st.classList.remove('on');document.getElementById('scanBtn').disabled=false});
 }
 
-function build(lh,url,strategy){
-  var c=lh.categories,a=lh.audits;
-  var cats=[['performance','Speed'],['seo','SEO'],['accessibility','Accessibility'],['best-practices','Best Practices']];
+function render(url,strategy,rings,metrics,issues,shopify){
   var scores={};
-  document.getElementById('rings').innerHTML=cats.map(function(k){var s=Math.round((c[k[0]]&&c[k[0]].score||0)*100);scores[k[1]]=s;
-    return '<div class="ring-c"><div class="ring" style="--p:'+s+';--c:'+col(s)+'"><b>'+s+'</b></div><span>'+k[1]+'</span></div>'}).join('');
-  var mets=[['first-contentful-paint','First paint'],['largest-contentful-paint','Main content'],['total-blocking-time','Blocking time'],['cumulative-layout-shift','Layout shift'],['speed-index','Speed index']];
-  var metricText=[];
-  document.getElementById('metrics').innerHTML=mets.map(function(m){var x=a[m[0]];if(!x)return '';var s=Math.round((x.score||0)*100);metricText.push(m[1]+': '+x.displayValue);
-    return '<div class="metric"><small><i style="background:'+col(s)+'"></i>'+m[1]+'</small><b>'+esc(x.displayValue||'-')+'</b></div>'}).join('');
-  // issues
-  var list=[];
-  Object.keys(a).forEach(function(id){var x=a[id];
-    if(x.score===null||x.score===undefined||x.score>=0.9)return;
-    if(['manual','notApplicable','informative'].indexOf(x.scoreDisplayMode)>-1)return;
-    var inPerf=c.performance&&c.performance.auditRefs.some(function(r){return r.id===id&&r.weight>0||r.id===id&&r.group==='load-opportunities'||r.id===id&&r.group==='diagnostics'});
-    var inSeo=c.seo&&c.seo.auditRefs.some(function(r){return r.id===id});
-    var inA11y=c.accessibility&&c.accessibility.auditRefs.some(function(r){return r.id===id&&r.weight>=3});
-    if(!(inPerf||inSeo||inA11y||PLAIN[id]))return;
-    var save=(x.details&&x.details.overallSavingsMs)||0;
-    var sev=x.score<0.5?'high':'med';if(save>1000)sev='high';
-    list.push({id:id,title:clean(x.title),fix:PLAIN[id]||clean(x.description).split('. ')[0]+'.',sev:sev,area:inSeo?'SEO':inPerf?'Speed':'Usability',w:(sev==='high'?2:1)*1000+save+(PLAIN[id]?500:0)});
-  });
-  list.sort(function(x,y){return y.w-x.w});list=list.slice(0,12);
-  if(!list.length)list=[{title:'No major technical issues found',fix:'Your technical basics look solid. The next wins are usually in product pages, offers and email flows.',sev:'low',area:'Overview'}];
-  document.getElementById('issues').innerHTML='<h4>What to fix first</h4>'+list.map(function(i){return '<div class="issue"><span class="sev '+i.sev+'">'+(i.sev==='high'?'High':i.sev==='med'?'Medium':'Good')+'</span><div><b>'+esc(i.title)+' <span style="font-weight:500;color:#8A8A8A;font-size:12.5px">· '+i.area+'</span></b><p>'+esc(i.fix)+'</p></div></div>'}).join('');
+  document.getElementById('rings').innerHTML=rings.map(function(k){scores[k[0]]=k[1];return '<div class="ring-c"><div class="ring" style="--p:'+k[1]+';--c:'+col(k[1])+'"><b>'+k[1]+'</b></div><span>'+k[0]+'</span></div>'}).join('');
+  document.getElementById('rings').style.gridTemplateColumns='repeat('+Math.min(rings.length,4)+',1fr)';
+  var metricText=metrics.map(function(m){return m[0]+': '+m[1]});
+  document.getElementById('metrics').innerHTML=metrics.map(function(m){return '<div class="metric"><small><i style="background:'+col(m[2])+'"></i>'+esc(m[0])+'</small><b>'+esc(m[1])+'</b></div>'}).join('');
+  var rank={high:0,med:1,low:2};var seen={};
+  var list=issues.filter(function(i){if(seen[i.title])return false;seen[i.title]=1;return true}).sort(function(a,b){return rank[a.sev]-rank[b.sev]}).slice(0,14);
+  if(!list.length)list=[{title:'No major issues found',fix:'Your basics look solid. The next wins are usually in offers, bundles and email flows.',sev:'low',area:'Overview'}];
+  document.getElementById('issues').innerHTML='<h4>What to fix first</h4>'+list.map(function(i){return '<div class="issue"><span class="sev '+i.sev+'">'+(i.sev==='high'?'High':i.sev==='med'?'Medium':'Low')+'</span><div><b>'+esc(i.title)+' <span style="font-weight:500;color:#8A8A8A;font-size:12.5px">· '+i.area+'</span></b><p>'+esc(i.fix)+'</p></div></div>'}).join('');
   document.getElementById('issueCount').textContent=list.length+(list.length===1?' issue':' issues');
-  var avg=Math.round((scores.Speed+scores.SEO+scores.Accessibility+scores['Best Practices'])/4);
+  var vals=rings.map(function(r){return r[1]});var avg=Math.round(vals.reduce(function(a,b){return a+b},0)/vals.length);
   var v=document.getElementById('verdict');
   v.textContent=avg>=90?'Excellent foundation':avg>=70?'Good, with room to grow':avg>=50?'Needs attention':'Losing sales: urgent fixes';
   v.style.background=col(avg)+'22';v.style.color=col(avg);
   var host=url.replace(/^https?:\/\//,'').replace(/\/$/,'');
   document.getElementById('repSite').textContent=host;
-  document.getElementById('repMeta').textContent=(strategy==='mobile'?'Mobile':'Desktop')+' test · '+new Date().toLocaleString();
-  REPORT={url:url,host:host,strategy:strategy,scores:scores,metrics:metricText,issues:list,verdict:v.textContent,date:new Date().toLocaleString()};
+  document.getElementById('repMeta').textContent=(shopify?'Shopify store · ':'')+(strategy==='mobile'?'Mobile':'Desktop')+' test · '+new Date().toLocaleString();
+  REPORT={url:url,host:host,strategy:strategy,scores:scores,metrics:metricText,issues:list,verdict:v.textContent,date:new Date().toLocaleString(),avg:avg};
+  try{sessionStorage.setItem('fg-report',JSON.stringify(REPORT))}catch(e){}
   document.getElementById('g-url').value=url;document.getElementById('g-dev').value=strategy;
   document.getElementById('g-scores').value=Object.keys(scores).map(function(k){return k+' '+scores[k]}).join(', ');
   document.getElementById('g-issues').value=list.map(function(i){return '['+i.sev+'] '+i.title}).join(' | ');
@@ -855,16 +942,23 @@ function build(lh,url,strategy){
   document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function waText(name){
-  var r=REPORT;return 'Hello Faith Great Digital Studio, I'+(name?' am '+name+' and I':'')+' just ran the Free Store Audit.\n\nStore: '+r.url+'\nTest: '+r.strategy+'\nScores: '+Object.keys(r.scores).map(function(k){return k+' '+r.scores[k]}).join(', ')+'\n\nTop issues:\n'+r.issues.slice(0,5).map(function(i,n){return (n+1)+'. '+i.title}).join('\n')+'\n\nI would like help fixing these.';
+/* message text that goes into every WhatsApp / TikTok message */
+function auditSummary(){
+  var r=REPORT;if(!r)return '';
+  return '📊 FREE STORE AUDIT RESULT\nStore: '+r.url+'\nOverall: '+r.avg+'/100 ('+r.verdict+')\nScores: '+Object.keys(r.scores).map(function(k){return k+' '+r.scores[k]}).join(' · ')+'\n\nTop issues found:\n'+r.issues.slice(0,5).map(function(i,n){return (n+1)+'. '+i.title}).join('\n');
 }
+function waText(name){
+  return 'Hello Faith Great Digital Studio, '+(name?'I am '+name+'. ':'')+'I just ran the Free Store Audit on your website.\n\n'+auditSummary()+'\n\nI would like help fixing these.';
+}
+function leadLine(){return LEAD?'\n\nName: '+LEAD.name+'\nEmail: '+LEAD.email+'\nWhatsApp: '+LEAD.whatsapp:''}
 function unlock(){
   document.getElementById('lockWrap').classList.remove('locked');
   document.getElementById('gate').style.display='none';
   document.getElementById('unlockedBar').style.display='flex';
-  document.getElementById('waBtn').href='https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(waText(''));
+  document.getElementById('waBtn').href='https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(waText(LEAD&&LEAD.name)+leadLine());
 }
 var UNLOCKED=false,LEAD=null;
+try{var saved=sessionStorage.getItem('fg-report');if(saved)REPORT=JSON.parse(saved)}catch(e){}
 document.getElementById('gateForm').addEventListener('submit',function(e){
   e.preventDefault();var f=this;
   LEAD={name:f.name.value,email:f.email.value,whatsapp:f.whatsapp.value};
@@ -874,18 +968,44 @@ document.getElementById('gateForm').addEventListener('submit',function(e){
     document.getElementById('gs1').classList.remove('on');document.getElementById('gs2').classList.add('on');
   });
 });
-document.getElementById('waUnlock').addEventListener('click',function(){
-  if(!REPORT||!LEAD)return;
-  var msg=waText(LEAD.name)+'\nEmail: '+LEAD.email+'\nWhatsApp: '+LEAD.whatsapp;
-  window.open('https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(msg),'_blank');
+function waitUnlock(){
   document.getElementById('waWait').style.display='block';
   var t0=Date.now(),done=false;
   function finish(){if(done)return;done=true;UNLOCKED=true;unlock();document.removeEventListener('visibilitychange',vis);window.removeEventListener('focus',foc)}
   function vis(){if(document.visibilityState==='visible'&&Date.now()-t0>3000)finish()}
   function foc(){if(Date.now()-t0>3000)finish()}
   document.addEventListener('visibilitychange',vis);window.addEventListener('focus',foc);
-  setTimeout(finish,15000);
+  setTimeout(finish,20000);
+}
+document.getElementById('waUnlock').addEventListener('click',function(){
+  if(!REPORT||!LEAD)return;
+  window.open('https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(waText(LEAD.name)+leadLine()),'_blank');
+  waitUnlock();
 });
+document.getElementById('ttUnlock').addEventListener('click',function(){
+  if(!REPORT||!LEAD)return;
+  var msg=waText(LEAD.name)+leadLine();
+  var done=function(){document.getElementById('ttNote').style.display='block';window.open(SITE.tiktok,'_blank');waitUnlock()};
+  try{navigator.clipboard.writeText(msg).then(done,function(){fallbackCopy(msg);done()})}catch(e){fallbackCopy(msg);done()}
+});
+function fallbackCopy(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+
+/* add the audit result to EVERY WhatsApp / TikTok message on the site */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a');if(!a||!REPORT)return;
+  var h=a.getAttribute('href')||'';
+  if(a.id==='waBtn')return;
+  if(h.indexOf('wa.me/'+SITE.whatsapp)>-1){
+    e.preventDefault();
+    window.open('https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent('Hello Faith Great Digital Studio, I\'m interested in your services.\n\n'+auditSummary()+leadLine()),'_blank');
+  }else if(h.indexOf('tiktok.com')>-1){
+    var msg='Hello Faith Great Digital Studio, I\'m interested in your services.\n\n'+auditSummary()+leadLine();
+    try{navigator.clipboard.writeText(msg)}catch(x){fallbackCopy(msg)}
+    showToast('Your audit result is copied. Paste it in your TikTok message to us.');
+  }
+},true);
+function showToast(t){var d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#0A0A0A;color:#fff;padding:14px 18px;border-radius:12px;font-size:14px;z-index:99;box-shadow:0 12px 30px rgba(0,0,0,.4);max-width:90%';document.body.appendChild(d);setTimeout(function(){d.remove()},5000)}
+
 document.getElementById('dlBtn').addEventListener('click',function(){
   var r=REPORT;if(!r||!UNLOCKED)return;
   var c=function(s){return s>=90?'#1a9e6f':s>=50?'#c98a10':'#d23c3c'};
@@ -896,7 +1016,7 @@ document.getElementById('dlBtn').addEventListener('click',function(){
    '<h3 style="font:700 16px Sora,Arial;margin:18px 0 8px">Key speed measures</h3><div style="font-size:13px;color:#333">'+r.metrics.map(esc).join(' · ')+'</div>'+
    '<h3 style="font:700 16px Sora,Arial;margin:22px 0 8px">What to fix first</h3>'+r.issues.map(function(i,n){return '<div style="border:1px solid #e3e3e3;border-radius:10px;padding:10px 12px;margin-bottom:8px;page-break-inside:avoid"><b style="font-size:14px">'+(n+1)+'. '+esc(i.title)+'</b> <span style="font-size:11px;color:#777">('+(i.sev==='high'?'High':i.sev==='med'?'Medium':'Good')+' · '+i.area+')</span><div style="font-size:13px;color:#444;margin-top:3px">'+esc(i.fix)+'</div></div>'}).join('')+
    '<div style="margin-top:22px;background:#EAF0FF;border-radius:12px;padding:16px;font-size:13.5px"><b>Want these fixed?</b> Faith Great Digital Studio can fix these issues for you. WhatsApp: +'+SITE.whatsapp+' · Email: '+SITE.email+'</div>'+
-   '<p style="font-size:11px;color:#888;margin-top:14px">Scores come from a single automated Google Lighthouse test and can vary between runs. They measure technical quality, not sales.</p></div>';
+   '<p style="font-size:11px;color:#888;margin-top:14px">Scores come from an automated check of your store public pages and can vary between runs. They highlight opportunities; they do not measure sales.</p></div>';
   document.body.classList.add('printing');window.print();setTimeout(function(){document.body.classList.remove('printing')},500);
 });
 document.getElementById('scanForm').addEventListener('submit',function(e){e.preventDefault();var u=normUrl(document.getElementById('scanUrl').value);if(!u){document.getElementById('scanUrl').focus();return}startScan(u)});
