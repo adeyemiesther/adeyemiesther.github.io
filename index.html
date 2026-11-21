@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Great Digital Studio | Shopify &amp; E-commerce Growth Agency</title>
+<meta name="description" content="Faith Great Digital Studio is an e-commerce growth agency led by Adeyemi Esther. Shopify store design, conversion optimisation, email marketing, SEO, ads and automation. Run a free store audit.">
+<meta property="og:title" content="Faith Great Digital Studio | E-commerce Growth Agency">
+<meta property="og:description" content="Shopify design, CRO, email, SEO, ads and automation for online stores. Get your free store audit.">
+<link rel="canonical" href="https://faithgreats.netlify.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D0E1A; --ink2:#151729; --ink3:#1F2238; --line-d:rgba(255,255,255,.09);
+  --bg:#F6F4EF; --card:#FFFFFF; --line:#E6E2D9;
+  --v:#6D4AFF; --v2:#8E74FF; --v-soft:#EEEAFF;
+  --coral:#FF7A59; --coral-soft:#FFEDE7;
+  --mint:#21C08B; --amber:#F4B740; --red:#EF4F4F;
+  --text:#22243A; --muted:#696B80; --muted-d:#A4A7C2;
+  --r:20px; --h:'Sora',system-ui,sans-serif; --b:'Inter',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}
+.wrap{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3,h4{font-family:var(--h);color:var(--ink);line-height:1.12;letter-spacing:-.025em}
+.dark{background:var(--ink);color:#C9CBE0}.dark h1,.dark h2,.dark h3,.dark h4{color:#fff}
+section{padding:110px 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--h);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--v);background:var(--v-soft);padding:7px 14px;border-radius:999px}
+.dark .kicker{background:rgba(109,74,255,.16);color:var(--v2)}
+.kicker i{width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block}
+h2{font-size:clamp(34px,4.4vw,54px);margin:18px 0 16px}
+h2 .hl{background:linear-gradient(100deg,var(--v),var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:17.5px;color:var(--muted);max-width:640px}.dark .sub{color:var(--muted-d)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.head.center{flex-direction:column;align-items:center;text-align:center}.head.center .sub{margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:14px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.22s;font-family:var(--h);letter-spacing:-.01em;white-space:nowrap}
+.btn-v{background:var(--v);color:#fff;box-shadow:0 12px 28px -12px rgba(109,74,255,.8)}
+.btn-v:hover{background:#5A37F2;transform:translateY(-2px)}
+.btn-c{background:var(--coral);color:#fff;box-shadow:0 12px 28px -12px rgba(255,122,89,.8)}
+.btn-c:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.btn-o{border-color:var(--line);background:#fff;color:var(--ink)}.btn-o:hover{border-color:var(--ink)}
+.dark .btn-o{background:transparent;border-color:rgba(255,255,255,.2);color:#fff}.dark .btn-o:hover{border-color:#fff}
+.btn-w{background:#fff;color:var(--ink)}.btn-w:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+
+/* top bar + nav */
+.topbar{background:linear-gradient(90deg,var(--v),#9B5CFF 50%,var(--coral));color:#fff;font-size:13.5px;text-align:center;padding:9px 14px;font-weight:500}
+.topbar a{text-decoration:underline;font-weight:700;margin-left:6px}
+nav{position:sticky;top:0;z-index:60;background:rgba(13,14,26,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:-.02em}
+.logo b{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--v),var(--coral));display:grid;place-items:center;font-size:15px;color:#fff}
+.logo small{display:block;font-size:10.5px;font-weight:500;letter-spacing:.14em;color:var(--muted-d);text-transform:uppercase;margin-top:1px}
+.links{display:flex;gap:30px;align-items:center}
+.links a{color:#C9CBE0;font-size:14.5px;font-weight:500;transition:.2s}.links a:hover{color:#fff}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.nav-cta .btn{padding:11px 18px;font-size:14px}
+.burger{display:none;background:none;border:1px solid var(--line-d);color:#fff;width:42px;height:42px;border-radius:10px;font-size:20px;cursor:pointer}
+
+/* hero */
+.hero{background:radial-gradient(900px 520px at 85% 10%,rgba(109,74,255,.35),transparent 60%),radial-gradient(700px 420px at 5% 95%,rgba(255,122,89,.18),transparent 60%),var(--ink);padding:90px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-d);background:rgba(255,255,255,.04);border-radius:999px;padding:7px 14px 7px 8px;font-size:13.5px;color:#DADCEF}
+.pill span{background:var(--mint);color:#06261A;font-weight:700;font-size:11.5px;padding:3px 9px;border-radius:999px;letter-spacing:.04em}
+.hero h1{font-size:clamp(42px,5.8vw,76px);color:#fff;margin:24px 0 22px;letter-spacing:-.035em}
+.hero h1 .hl{background:linear-gradient(100deg,#A894FF,var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18.5px;color:#B9BCD6;max-width:580px}
+.hero-audit{margin-top:34px;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:18px;padding:8px;display:flex;gap:8px;max-width:600px}
+.hero-audit input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:15.5px;padding:0 14px}
+.hero-audit input::placeholder{color:#7E81A0}
+.hero-note{font-size:13px;color:#8C8FAE;margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+.hero-note span::before{content:"✓ ";color:var(--mint);font-weight:700}
+.founder{position:relative;justify-self:center;width:min(420px,100%)}
+.founder-card{background:linear-gradient(160deg,#25284A,#15172A);border:1px solid var(--line-d);border-radius:28px;padding:14px;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
+.founder-card .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/4.6}
+.founder-card .ph img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.founder-card .meta{display:flex;justify-content:space-between;align-items:center;padding:16px 8px 6px}
+.founder-card .meta b{color:#fff;font-family:var(--h);font-size:18px;display:block}
+.founder-card .meta small{color:var(--muted-d);font-size:13px}
+.founder-card .meta em{font-style:normal;font-size:12px;font-weight:600;color:var(--mint);background:rgba(33,192,139,.12);padding:6px 11px;border-radius:999px}
+.chip-f{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:12px 15px;box-shadow:0 24px 40px -16px rgba(0,0,0,.55);display:flex;gap:11px;align-items:center;animation:float 6s ease-in-out infinite;font-size:13.5px}
+.chip-f .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:17px}
+.chip-f b{display:block;font-family:var(--h);font-size:14px}
+.chip-f small{color:var(--muted);font-size:12px}
+.chip-f.a{left:-58px;top:16%}.chip-f.b{right:-40px;top:50%;animation-delay:-3s}.chip-f.c{left:-40px;bottom:30%;animation-delay:-1.5s}
+@keyframes float{50%{transform:translateY(-10px)}}
+.platforms{margin-top:40px;border-top:1px solid var(--line-d);padding:26px 0 34px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between}
+.platforms p{font-size:12.5px;color:#8C8FAE;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.platforms div{display:flex;gap:34px;flex-wrap:wrap}
+.platforms span{font-family:var(--h);font-weight:700;color:#5E6283;font-size:18px;letter-spacing:-.02em}
+
+/* gaps */
+.gaps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.25s;display:flex;flex-direction:column}
+.gap:hover{transform:translateY(-5px);box-shadow:0 26px 50px -28px rgba(13,14,26,.35)}
+.gap .tag{align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);background:#FDECEC;padding:5px 10px;border-radius:8px}
+.gap h3{font-size:20px;margin:16px 0 8px}
+.gap p{font-size:15px;color:var(--muted);flex:1}
+.gap .fix{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink);font-weight:500}
+.gap .fix b{color:var(--mint);font-family:var(--h);font-size:12px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:3px}
+.gaps-cta{margin-top:36px;background:var(--ink);border-radius:24px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;color:#C9CBE0}
+.gaps-cta h3{color:#fff;font-size:22px}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative;overflow:hidden;transition:.25s}
+.svc:hover{border-color:var(--v);transform:translateY(-4px)}
+.svc .ico{width:50px;height:50px;border-radius:14px;background:var(--v-soft);color:var(--v);display:grid;place-items:center;margin-bottom:20px}
+.svc .ico svg{width:24px;height:24px}
+.svc h3{font-size:20px;margin-bottom:8px}
+.svc p{font-size:14.5px;color:var(--muted)}
+.svc ul{list-style:none;margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+.svc li{font-size:12.5px;font-weight:600;background:var(--bg);border:1px solid var(--line);padding:5px 10px;border-radius:8px;color:var(--text)}
+.svc.big{grid-column:span 2;background:var(--ink);border-color:var(--ink);color:#C9CBE0}
+.svc.big h3{color:#fff;font-size:26px}.svc.big p{color:var(--muted-d);font-size:15.5px;max-width:460px}
+.svc.big .ico{background:rgba(109,74,255,.2);color:#B5A5FF}
+.svc.big li{background:rgba(255,255,255,.06);border-color:var(--line-d);color:#DADCEF}
+.svc.big::after{content:"";position:absolute;right:-80px;bottom:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,89,.35),transparent 70%)}
+.svc.wide{grid-column:span 3}
+.svc.coral .ico{background:var(--coral-soft);color:var(--coral)}
+
+/* audit */
+.audit{background:radial-gradient(800px 500px at 100% 0%,rgba(109,74,255,.28),transparent 60%),var(--ink)}
+.audit-box{background:var(--ink2);border:1px solid var(--line-d);border-radius:28px;padding:40px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.steps-mini{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.steps-mini div{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--muted-d);background:rgba(255,255,255,.04);border:1px solid var(--line-d);padding:8px 14px;border-radius:999px}
+.steps-mini b{width:22px;height:22px;border-radius:50%;background:var(--v);color:#fff;display:grid;place-items:center;font-size:12px}
+.scan-form{display:grid;grid-template-columns:1fr auto auto;gap:12px}
+.inp{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:14px;color:#fff;font-size:15.5px;padding:15px 16px;outline:none;transition:.2s}
+.inp:focus{border-color:var(--v2);box-shadow:0 0 0 4px rgba(109,74,255,.2)}
+.seg{display:flex;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:14px;padding:4px}
+.seg label{cursor:pointer}.seg input{display:none}
+.seg span{display:block;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted-d)}
+.seg input:checked+span{background:#fff;color:var(--ink)}
+.status{margin-top:22px;font-size:15px;color:var(--muted-d);display:none;align-items:center;gap:12px}
+.status.on{display:flex}
+.spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(255,255,255,.15);border-top-color:var(--v2);animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.bar{height:6px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin-top:12px;flex-basis:100%}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--v),var(--coral));transition:width .5s}
+#report{display:none;margin-top:34px}
+.rep-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--line-d)}
+.rep-head small{color:var(--muted-d);font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.rep-head h3{font-size:24px;margin-top:4px;word-break:break-all}
+.verdict{padding:10px 16px;border-radius:12px;font-weight:600;font-size:14px}
+.rings{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
+.ring-c{background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:18px;padding:22px;text-align:center}
+.ring{--p:0;--c:var(--mint);width:104px;height:104px;margin:0 auto 12px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%),rgba(255,255,255,.08) 0);display:grid;place-items:center}
+.ring b{width:84px;height:84px;border-radius:50%;background:var(--ink2);display:grid;place-items:center;font-family:var(--h);font-size:28px;color:#fff}
+.ring-c span{font-size:14px;font-weight:600;color:#DADCEF}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:30px}
+.metric{background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:14px;padding:14px}
+.metric small{display:block;font-size:12px;color:var(--muted-d)}
+.metric b{font-family:var(--h);color:#fff;font-size:20px}
+.metric i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.locked{position:relative;min-height:500px}
+.locked .issues{filter:blur(6px);pointer-events:none;user-select:none;max-height:360px;overflow:hidden}
+.issues h4{font-size:18px;margin-bottom:14px}
+.issue{display:flex;gap:14px;padding:16px;border:1px solid var(--line-d);border-radius:14px;margin-bottom:10px;background:rgba(255,255,255,.02)}
+.issue .sev{flex-shrink:0;font-size:11px;font-weight:700;letter-spacing:.05em;padding:4px 8px;border-radius:6px;height:fit-content;text-transform:uppercase}
+.sev.high{background:rgba(239,79,79,.16);color:#FF8A8A}.sev.med{background:rgba(244,183,64,.16);color:#F7CB72}.sev.low{background:rgba(33,192,139,.14);color:#5FE0B2}
+.issue b{color:#fff;font-size:15px;display:block}
+.issue p{font-size:14px;color:var(--muted-d);margin-top:3px}
+.gate{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;padding-top:20px;background:linear-gradient(180deg,rgba(21,23,41,.4),rgba(21,23,41,.95) 40%)}
+.gate-card{background:#fff;color:var(--text);border-radius:22px;padding:30px;width:min(560px,100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.gate-card h3{font-size:22px;color:var(--ink)}
+.gate-card p{font-size:14.5px;color:var(--muted);margin:6px 0 18px}
+.gate-card .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gate-card input{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:15px;outline:none;margin-bottom:10px;background:#FBFAF7}
+.gate-card input:focus{border-color:var(--v);box-shadow:0 0 0 4px rgba(109,74,255,.12)}
+.gate-card .btn{width:100%;margin-top:4px}
+.gate-card .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+.unlocked-bar{display:none;margin-top:22px;background:linear-gradient(100deg,rgba(109,74,255,.18),rgba(255,122,89,.14));border:1px solid var(--line-d);border-radius:18px;padding:22px 24px;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.unlocked-bar h4{font-size:18px}.unlocked-bar p{font-size:14px;color:var(--muted-d)}
+.unlocked-bar .btns{display:flex;gap:10px;flex-wrap:wrap}
+.rep-note{font-size:12.5px;color:#7E81A0;margin-top:18px}
+.err{display:none;margin-top:20px;background:rgba(239,79,79,.1);border:1px solid rgba(239,79,79,.3);color:#FFB1B1;padding:16px 18px;border-radius:14px;font-size:14.5px}
+.err a{color:#fff;text-decoration:underline}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.25s}
+.case:hover{transform:translateY(-5px);box-shadow:0 30px 60px -32px rgba(13,14,26,.4)}
+.case .vis{padding:26px 26px 0;background:var(--c1)}
+.case .br{background:#fff;border-radius:12px 12px 0 0;overflow:hidden}
+.case .br .t{display:flex;gap:6px;padding:10px 12px;background:#F2F1EE}.case .br .t i{width:9px;height:9px;border-radius:50%;background:#D8D5CE}
+.case .site{background:var(--c2);color:var(--c3);padding:16px 18px 20px}
+.case .site .n{display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:.08em}
+.case .site .n b{font-family:var(--h);font-size:16px;letter-spacing:.1em}
+.case .site .hh{font-family:var(--h);font-size:22px;font-weight:700;margin:14px 0 4px;letter-spacing:-.02em}
+.case .site .s{font-size:11px;opacity:.7}
+.case .site .g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.case .site .g div{aspect-ratio:1;border-radius:8px;background:var(--c4)}
+.case .body{padding:26px 28px 28px}
+.case .cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--v)}
+.case h3{font-size:22px;margin:8px 0 8px}
+.case p{font-size:15px;color:var(--muted)}
+.case .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.case .tags span{font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:p}
+.pstep{background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:var(--r);padding:28px}
+.pstep .n{font-family:var(--h);font-size:14px;font-weight:700;color:var(--v2);background:rgba(109,74,255,.15);width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:20px}
+.pstep h3{font-size:20px;margin-bottom:8px}
+.pstep p{font-size:14.5px;color:var(--muted-d)}
+.pstep small{display:block;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line-d);font-size:13px;color:#DADCEF}
+.pstep small b{color:var(--coral);font-family:var(--h);font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:block}
+
+/* why */
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.why-photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/4.4}
+.why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.why-photo .quote{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(13,14,26,.86);backdrop-filter:blur(10px);color:#fff;border-radius:18px;padding:20px}
+.why-photo .quote p{font-family:var(--h);font-size:16.5px;line-height:1.45}
+.why-photo .quote small{display:block;margin-top:10px;color:var(--muted-d);font-size:13px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.why-list div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.why-list b{font-family:var(--h);color:var(--ink);font-size:16px;display:block;margin-bottom:4px}
+.why-list p{font-size:14px;color:var(--muted)}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;position:relative}
+.plan .t{font-family:var(--h);font-weight:700;font-size:18px;color:var(--ink)}
+.plan .d{font-size:14px;color:var(--muted);margin:6px 0 20px;min-height:44px}
+.plan .p{font-family:var(--h);font-size:40px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.plan .p small{font-size:14px;font-weight:500;color:var(--muted);letter-spacing:0}
+.plan ul{list-style:none;margin:22px 0 26px;display:grid;gap:10px;flex:1}
+.plan li{font-size:14.5px;display:flex;gap:10px}
+.plan li::before{content:"";flex-shrink:0;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--v-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236D4AFF' stroke-width='3.5'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center/11px no-repeat}
+.plan .btn{width:100%}
+.plan.pop{background:var(--ink);border-color:var(--ink);color:#C9CBE0;box-shadow:0 40px 70px -40px rgba(13,14,26,.9)}
+.plan.pop .t,.plan.pop .p{color:#fff}.plan.pop .d,.plan.pop .p small{color:var(--muted-d)}
+.plan.pop li::before{background-color:rgba(109,74,255,.25)}
+.plan .badge{position:absolute;top:-12px;right:22px;background:var(--coral);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:6px 12px;border-radius:999px;text-transform:uppercase}
+.price-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:26px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column}
+.rev .st{color:var(--amber);letter-spacing:2px}
+.rev blockquote{font-size:15.5px;color:var(--text);margin:14px 0 22px;flex:1}
+.rev .who{display:flex;gap:12px;align-items:center;padding-top:18px;border-top:1px solid var(--line)}
+.rev .av{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--v),var(--coral));color:#fff;display:grid;place-items:center;font-family:var(--h);font-weight:700}
+.rev .who b{display:block;font-size:14.5px;color:var(--ink)}.rev .who small{font-size:13px;color:var(--muted)}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:20px 24px;font-family:var(--h);font-weight:600;color:var(--ink);font-size:16.5px;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--v);line-height:1;transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 24px 22px;color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}
+.cmethods{display:grid;gap:12px;margin-top:30px}
+.cm{display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid var(--line-d);border-radius:16px;background:rgba(255,255,255,.03);transition:.2s}
+a.cm:hover{border-color:var(--v2)}
+.cm .i{width:44px;height:44px;border-radius:12px;background:rgba(109,74,255,.18);color:#B5A5FF;display:grid;place-items:center;flex-shrink:0}
+.cm small{display:block;font-size:12px;color:var(--muted-d);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.cm b{color:#fff;font-size:15.5px;font-weight:600}
+.cform{background:#fff;border-radius:26px;padding:36px;color:var(--text)}
+.cform h3{font-size:24px;margin-bottom:20px}
+.f{margin-bottom:14px}.f label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:15px;outline:none;background:#FBFAF7;color:var(--text)}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--v);box-shadow:0 0 0 4px rgba(109,74,255,.12)}
+.f textarea{min-height:110px;resize:vertical}
+.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ok{display:none;text-align:center;padding:40px 10px}
+.ok .tk{width:66px;height:66px;border-radius:50%;background:var(--mint);color:#fff;display:grid;place-items:center;font-size:30px;margin:0 auto 16px}
+.hidden{display:none}
+
+/* footer */
+footer{background:#08090F;color:#8C8FAE;padding:70px 0 30px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--line-d)}
+.ft p{font-size:14.5px;margin-top:14px;max-width:320px}
+.ft h4{color:#fff;font-size:15px;margin-bottom:14px}
+.ft ul{list-style:none;display:grid;gap:9px;font-size:14.5px}
+.ft a:hover{color:#fff}
+.soc{display:flex;gap:10px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:11px;border:1px solid var(--line-d);display:grid;place-items:center;color:#DADCEF;transition:.2s}
+.soc a:hover{background:var(--v);border-color:var(--v);color:#fff}
+.fb{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:13.5px}
+.wa{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:600;padding:13px 18px 13px 14px;border-radius:999px;box-shadow:0 16px 32px -10px rgba(0,0,0,.45);font-family:var(--h);font-size:14.5px;transition:.2s}
+.wa:hover{transform:translateY(-3px)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+
+@media (max-width:1050px){
+  .hero-grid,.why,.contact{grid-template-columns:1fr}
+  .founder{order:-1;width:min(360px,90%)}
+  .chip-f.a{left:-20px}.chip-f.b{right:-16px}.chip-f.c{left:-14px}
+  .gaps,.revs{grid-template-columns:1fr 1fr}
+  .bento,.prices,.proc{grid-template-columns:1fr 1fr}
+  .svc.wide{grid-column:1/-1}
+  .metrics{grid-template-columns:repeat(3,1fr)}
+  .rings{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr 1fr}
+  .links{position:fixed;top:118px;left:4%;right:4%;flex-direction:column;align-items:flex-start;background:var(--ink2);border:1px solid var(--line-d);border-radius:18px;padding:24px;gap:18px;display:none}
+  .links.open{display:flex}
+  .burger{display:block}
+  .nav-cta .btn-o{display:none}
+}
+@media (max-width:680px){
+  section{padding:80px 0}
+  .gaps,.revs,.bento,.prices,.proc,.work,.why-list{grid-template-columns:1fr}
+  .svc.big{grid-column:auto}
+  .scan-form{grid-template-columns:1fr}
+  .metrics{grid-template-columns:1fr 1fr}
+  .audit-box{padding:22px}
+  .gate-card .row,.cform .row{grid-template-columns:1fr}
+  .hero-audit{flex-direction:column}.hero-audit input{padding:12px}
+  .chip-f{display:none}
+  .nav-cta .btn{display:none}
+  .ft{grid-template-columns:1fr}
+  .wa span{display:none}.wa{padding:14px}
+  .cform{padding:24px}
+}
+
+
+/* brands */
+.brands{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.brand{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.brand:hover{transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(13,14,26,.45)}
+.brand .shot{position:relative;background:#ECEAE4;padding:16px 16px 0}
+.brand .shot .frame{border-radius:12px 12px 0 0;overflow:hidden;box-shadow:0 -6px 24px -10px rgba(0,0,0,.25)}
+.brand .shot .t{display:flex;gap:6px;align-items:center;padding:9px 12px;background:#fff;border-bottom:1px solid #eee}
+.brand .shot .t i{width:9px;height:9px;border-radius:50%;background:#E2DED6}
+.brand .shot .t span{margin-left:10px;font-size:11.5px;color:#8a8a8a;background:#F4F2EE;padding:3px 10px;border-radius:6px}
+.brand .shot img{width:100%;aspect-ratio:962/577;object-fit:cover;object-position:top}
+.brand .bd{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.brand .cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--v)}
+.brand h3{font-size:22px;margin:6px 0 8px}
+.brand p{font-size:15px;color:var(--muted);flex:1}
+.brand .tags{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
+.brand .tags span{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:8px;background:var(--bg);border:1px solid var(--line)}
+.brand a.visit{font-family:var(--h);font-weight:600;font-size:14.5px;color:var(--v)}
+.brand a.visit:hover{text-decoration:underline}
+.trusted{display:flex;align-items:center;gap:14px;margin-top:22px;color:#8C8FAE;font-size:13.5px;flex-wrap:wrap}
+.trusted b{font-family:var(--h);color:#DADCEF;font-weight:600}
+.gate-step{display:none}
+.gate-step.on{display:block}
+.wa-step{text-align:center}
+.wa-step .big{width:64px;height:64px;border-radius:18px;background:#25D366;display:grid;place-items:center;margin:0 auto 14px}
+.wa-step .btn{background:#25D366;color:#fff;box-shadow:0 12px 26px -12px rgba(37,211,102,.8)}
+.wa-step .btn:hover{background:#1EBE5A}
+.wa-wait{display:none;font-size:13.5px;color:var(--muted);margin-top:12px}
+@media (max-width:1050px){.brands{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.brands{grid-template-columns:1fr}}
+
+/* print = report only */
+@media print{
+  body *{visibility:hidden}
+  #printArea,#printArea *{visibility:visible}
+  #printArea{position:absolute;left:0;top:0;width:100%;color:#111;padding:20px}
+}
+#printArea{display:none}
+body.printing #printArea{display:block}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔍 Is your store leaking sales? Get your free speed &amp; SEO audit in 60 seconds <a href="#audit">Run free audit →</a></div>
+
+<nav>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><b>FG</b><div>Faith Great<small>Digital Studio</small></div></a>
+    <div class="links" id="links">
+      <a href="#brands">Clients</a>
+      <a href="#gaps">Why Stores Struggle</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-o">Book a Call</a>
+      <a href="#audit" class="btn btn-v">Free Audit</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="rv">
+        <div class="pill"><span>NOW BOOKING</span> E-commerce growth agency for Shopify &amp; online brands</div>
+        <h1>We build stores that <span class="hl">sell more</span>, not just look good.</h1>
+        <p class="lead">Faith Great Digital Studio helps online brands grow with high-converting Shopify design, conversion optimisation, email marketing, SEO, ads and automation. One team, one plan, real growth.</p>
+        <form class="hero-audit" id="heroAudit">
+          <input type="text" id="heroUrl" placeholder="Enter your store URL, e.g. yourstore.com" aria-label="Your store URL">
+          <button class="btn btn-c" type="submit">Audit My Store Free →</button>
+        </form>
+        <div class="hero-note"><span>Speed, SEO &amp; mobile scores</span><span>Results in about 60 seconds</span><span>Downloadable report</span></div>
+      </div>
+      <div class="founder rv">
+        <div class="founder-card">
+          <div class="ph"><img src="photo_5963206128361476171_y.jpg" alt="Adeyemi Esther, Founder of Faith Great Digital Studio"></div>
+          <div class="meta"><div><b>Adeyemi Esther</b><small>Founder &amp; Lead Strategist</small></div><em>● Available</em></div>
+        </div>
+        <div class="chip-f a"><div class="ic" style="background:#EEEAFF">🛒</div><div><b>Shopify Experts</b><small>Design · Build · Optimise</small></div></div>
+        <div class="chip-f b"><div class="ic" style="background:#E3F8F0">📈</div><div><b>Conversion focused</b><small>Every page has a job</small></div></div>
+        <div class="chip-f c"><div class="ic" style="background:#FFEDE7">✉️</div><div><b>Email &amp; SMS</b><small>Revenue on autopilot</small></div></div>
+      </div>
+    </div>
+    <div class="trusted">Brands we've worked with: <b>Anileo</b> · <b>Deco Design</b> · <b>Shake Wag &amp; Roll</b></div>
+    <div class="platforms">
+      <p>Platforms &amp; tools we work with</p>
+      <div><span>Shopify</span><span>WooCommerce</span><span>WordPress</span><span>Wix</span><span>Etsy</span><span>Klaviyo</span><span>Meta Ads</span><span>Google</span></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- BRANDS -->
+<section id="brands" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> Brands we've worked with</span><h2>Real stores, <span class="hl">live today.</span></h2></div>
+      <p class="sub">A few of the Shopify brands we've designed, built and improved. Click any store to see it live.</p>
+    </div>
+    <div class="brands">
+      <article class="brand rv">
+        <div class="shot"><div class="frame"><div class="t"><i></i><i></i><i></i><span>anileo.myshopify.com</span></div><img src="brand-anileo.png" alt="Anileo Shopify store homepage" loading="lazy"></div></div>
+        <div class="bd"><span class="cat">Faith apparel · Shopify</span><h3>Anileo</h3><p>Shopify store design for a faith-inspired apparel brand, with a warm, elegant brown look built around the brand's message: "Wear your faith. Walk in His light."</p><div class="tags"><span>Store design</span><span>Branding</span><span>Shopify</span></div><a class="visit" href="https://anileo.myshopify.com" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+      <article class="brand rv">
+        <div class="shot"><div class="frame"><div class="t"><i></i><i></i><i></i><span>decodesignny.com</span></div><img src="brand-deco.png" alt="Deco Design Shopify store homepage" loading="lazy"></div></div>
+        <div class="bd"><span class="cat">Home décor · Shopify</span><h3>Deco Design</h3><p>A clean, modern Shopify store for a home goods brand selling handcrafted crystal vases and glassware, styled with a premium, editorial feel.</p><div class="tags"><span>Store design</span><span>Product setup</span><span>Shopify</span></div><a class="visit" href="https://decodesignny.com" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+      <article class="brand rv">
+        <div class="shot"><div class="frame"><div class="t"><i></i><i></i><i></i><span>shakewagroll.net</span></div><img src="brand-shakewag.png" alt="Shake Wag and Roll Shopify store homepage" loading="lazy"></div></div>
+        <div class="bd"><span class="cat">Pet products · Shopify</span><h3>Shake Wag &amp; Roll</h3><p>Ongoing store support for a pet products brand: fixing broken links and technical issues and improving store speed and the shopping experience.</p><div class="tags"><span>Technical fixes</span><span>Speed</span><span>Shopify</span></div><a class="visit" href="https://shakewagroll.net" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GAPS -->
+<section id="gaps">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> What most stores are missing</span><h2>Why most online stores <span class="hl">struggle to sell</span> today.</h2></div>
+      <p class="sub">Traffic is more expensive than ever and shoppers are less patient. These are the gaps we find again and again when we audit stores, and how we fix them.</p>
+    </div>
+    <div class="gaps">
+      <div class="gap rv"><span class="tag">Slow mobile experience</span><h3>Your store is slow on phones</h3><p>Most shoppers browse on mobile. Heavy images, too many apps and bloated themes make pages lag, and visitors leave before they see a product.</p><div class="fix"><b>The fix</b>Speed optimisation, image compression, app clean-up and a lighter theme setup.</div></div>
+      <div class="gap rv"><span class="tag">No email &amp; SMS flows</span><h3>You lose buyers who don't check out</h3><p>Most visitors leave without buying. Without welcome, abandoned-cart, browse-abandonment and post-purchase flows, that money never comes back.</p><div class="fix"><b>The fix</b>Klaviyo email &amp; SMS flows that follow up automatically, 24/7.</div></div>
+      <div class="gap rv"><span class="tag">Weak product pages</span><h3>Product pages don't build desire</h3><p>Thin descriptions, few photos, no video, no size guides and no answers to common questions leave shoppers unsure, and unsure shoppers don't buy.</p><div class="fix"><b>The fix</b>Conversion copy, rich media, FAQs, comparison blocks and clear calls to action.</div></div>
+      <div class="gap rv"><span class="tag">Low trust</span><h3>Visitors don't trust you yet</h3><p>No reviews, no customer photos, unclear shipping and returns, and no real brand story. New shoppers need proof before they hand over their card.</p><div class="fix"><b>The fix</b>Reviews &amp; UGC, trust badges, clear policies and an "About" that sells.</div></div>
+      <div class="gap rv"><span class="tag">Invisible in search</span><h3>Google and AI search can't find you</h3><p>Missing titles, meta descriptions, alt text and structured data mean you don't show up on Google, Google Shopping, or the AI assistants shoppers now ask.</p><div class="fix"><b>The fix</b>Technical &amp; on-page SEO, product schema and content built for search.</div></div>
+      <div class="gap rv"><span class="tag">Broken tracking</span><h3>You don't know what's working</h3><p>Without GA4, the Meta Pixel and Conversions API set up properly, ads optimise blindly and you can't tell which products, pages or campaigns make money.</p><div class="fix"><b>The fix</b>Clean analytics, pixel &amp; CAPI setup and a simple monthly dashboard.</div></div>
+      <div class="gap rv"><span class="tag">Low order value</span><h3>Customers buy one thing and leave</h3><p>No bundles, upsells, free-shipping thresholds or "frequently bought together" means every order is smaller than it could be.</p><div class="fix"><b>The fix</b>Bundles, cart upsells, tiered offers and smart free-shipping goals.</div></div>
+      <div class="gap rv"><span class="tag">Checkout friction</span><h3>Checkout is too much work</h3><p>Surprise costs, forced account creation and no express payment options cause people to abandon right at the finish line.</p><div class="fix"><b>The fix</b>Express pay (Shop Pay, Apple Pay, PayPal), clear costs and a smoother checkout.</div></div>
+      <div class="gap rv"><span class="tag">No retention plan</span><h3>Customers buy once and forget you</h3><p>Chasing new buyers every month is expensive. Without loyalty, reviews requests, win-back emails or subscriptions, repeat sales stay low.</p><div class="fix"><b>The fix</b>Loyalty &amp; referral programs, win-back flows and subscriptions.</div></div>
+    </div>
+    <div class="gaps-cta rv">
+      <div><h3>Not sure which of these your store has?</h3><p>Run the free audit and see your speed, SEO and mobile scores in about a minute.</p></div>
+      <a href="#audit" class="btn btn-c">Check My Store Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT -->
+<section id="audit" class="audit dark">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker"><i></i> Free store audit tool</span>
+      <h2>How healthy is <span class="hl">your store?</span></h2>
+      <p class="sub">Enter your store link and we'll scan it with Google Lighthouse, the engine behind Google PageSpeed Insights. You'll see your scores instantly. Unlock and download the full report by sending us your details.</p>
+    </div>
+    <div class="audit-box rv">
+      <div class="steps-mini"><div><b>1</b> Enter your store link</div><div><b>2</b> See your scores</div><div><b>3</b> Send your details to unlock</div><div><b>4</b> Download your full report</div></div>
+      <form class="scan-form" id="scanForm">
+        <input class="inp" id="scanUrl" type="text" placeholder="https://yourstore.com" required aria-label="Store URL">
+        <div class="seg"><label><input type="radio" name="strategy" value="mobile" checked><span>📱 Mobile</span></label><label><input type="radio" name="strategy" value="desktop"><span>💻 Desktop</span></label></div>
+        <button class="btn btn-v" type="submit" id="scanBtn">Run Free Audit →</button>
+      </form>
+      <div class="status" id="status"><div class="spin"></div><span id="statusText">Scanning your store…</span><div class="bar"><i id="barFill"></i></div></div>
+      <div class="err" id="err"></div>
+
+      <div id="report">
+        <div class="rep-head">
+          <div><small>Store audit report</small><h3 id="repSite"></h3><p style="font-size:14px;color:var(--muted-d)" id="repMeta"></p></div>
+          <div class="verdict" id="verdict"></div>
+        </div>
+        <div class="rings" id="rings"></div>
+        <div class="metrics" id="metrics"></div>
+
+        <div class="locked" id="lockWrap">
+          <div class="issues" id="issues"></div>
+          <div class="gate" id="gate">
+            <div class="gate-card">
+              <div class="gate-step on" id="gs1">
+              <h3>🔒 Unlock your full report</h3>
+              <p>We found <b id="issueCount">several issues</b> on your store. <b>Step 1 of 2:</b> enter your details. <b>Step 2:</b> send us a quick WhatsApp message to unlock every finding and download your PDF report.</p>
+              <form name="audit-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="gateForm">
+                <input type="hidden" name="form-name" value="audit-lead">
+                <input type="hidden" name="store-url" id="g-url">
+                <input type="hidden" name="device" id="g-dev">
+                <input type="hidden" name="scores" id="g-scores">
+                <input type="hidden" name="issues" id="g-issues">
+                <p class="hidden"><label>Leave empty <input name="bot-field"></label></p>
+                <div class="row"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email address" required></div>
+                <input name="whatsapp" placeholder="WhatsApp number (with country code)" required>
+                <input name="message" placeholder="What's your biggest challenge right now? (optional)">
+                <button class="btn btn-v" type="submit">Continue →</button>
+                <p class="fine">No spam. We only use your details to send your report and follow up.</p>
+              </form>
+              </div>
+              <div class="gate-step wa-step" id="gs2">
+                <div class="big"><svg width="34" height="34" fill="#fff" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></div>
+                <h3>Step 2 of 2: Message us on WhatsApp</h3>
+                <p>Tap the button below. WhatsApp will open with your report summary already written. <b>Press send</b>, then come back here. Your full report and download unlock automatically.</p>
+                <button class="btn" type="button" id="waUnlock" style="width:100%">Send on WhatsApp to Unlock →</button>
+                <p class="wa-wait" id="waWait">Waiting for you to send the message… Come back to this page after sending.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="unlocked-bar" id="unlockedBar">
+          <div><h4>✅ Report unlocked. Thank you!</h4><p>Download your report, or chat with us on WhatsApp to get these issues fixed.</p></div>
+          <div class="btns"><button class="btn btn-w" id="dlBtn" type="button">⬇ Download PDF Report</button><a class="btn btn-c" id="waBtn" target="_blank" rel="noopener">Get These Fixed →</a></div>
+        </div>
+        <p class="rep-note">Scores come from a single automated Google Lighthouse test and can vary between runs. They measure technical quality, not sales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> Our services</span><h2>Everything your store needs <span class="hl">to grow</span>, under one roof.</h2></div>
+      <p class="sub">Instead of juggling a designer, a developer, an email marketer and an ads person, you get one team with one plan for your store.</p>
+    </div>
+    <div class="bento">
+      <div class="svc big rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><h3>Shopify Store Design &amp; Development</h3><p>Custom, mobile-first stores built to convert, from brand-new launches to full redesigns and migrations from WooCommerce, Wix or Etsy.</p><ul><li>New store builds</li><li>Redesigns</li><li>Theme customisation</li><li>Migrations</li><li>WooCommerce &amp; Wix</li></ul></div>
+      <div class="svc rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg></div><h3>Conversion Optimisation</h3><p>Turn more visitors into buyers with better product pages, offers and checkout.</p><ul><li>CRO audits</li><li>Product pages</li><li>Upsells</li></ul></div>
+      <div class="svc coral rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Email &amp; SMS Marketing</h3><p>Klaviyo flows and campaigns that bring buyers back automatically.</p><ul><li>Abandoned cart</li><li>Welcome</li><li>Win-back</li></ul></div>
+      <div class="svc rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>SEO &amp; AI Search</h3><p>Get found on Google, Google Shopping and AI assistants.</p><ul><li>Technical SEO</li><li>Schema</li><li>Content</li></ul></div>
+      <div class="svc coral rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1ZM16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></div><h3>Paid Ads</h3><p>Meta, Google and TikTok campaigns built on clean tracking.</p><ul><li>Meta Ads</li><li>Google Shopping</li><li>TikTok</li></ul></div>
+      <div class="svc rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Analytics &amp; Tracking</h3><p>GA4, Meta Pixel and Conversions API set up properly.</p><ul><li>GA4</li><li>Pixel &amp; CAPI</li><li>Dashboards</li></ul></div>
+      <div class="svc rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg></div><h3>Automation</h3><p>Zapier, Make, n8n and GoHighLevel workflows that save hours every week.</p><ul><li>Order flows</li><li>Lead capture</li></ul></div>
+      <div class="svc rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></div><h3>Product Research &amp; Dropshipping</h3><p>Winning products, vetted suppliers and launch-ready stores.</p><ul><li>Niche research</li><li>Suppliers</li></ul></div>
+      <div class="svc big wide rv"><div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div><h3>Monthly Growth Partner</h3><p>Ongoing support for brands that want a dedicated team: store updates, CRO tests, email campaigns, SEO and reporting, every month.</p><ul><li>Monthly strategy call</li><li>Store updates</li><li>Email campaigns</li><li>CRO testing</li><li>Monthly report</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" style="background:#EFECE5">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> Selected work</span><h2>Store concepts &amp; <span class="hl">projects.</span></h2></div>
+      <p class="sub">A look at the kind of stores we design and improve: fashion, beauty, luxury and dropshipping brands on Shopify and WooCommerce.</p>
+    </div>
+    <div class="work">
+      <article class="case rv"><div class="vis" style="--c1:#F1DCD6;--c2:#FBF4F1;--c3:#3B2723;--c4:#E8CEC5"><div class="br"><div class="t"><i></i><i></i><i></i></div><div class="site"><div class="n"><b>LUXE FEMME</b><span>SHOP · BAG (2)</span></div><div class="hh">New Arrivals, Summer Edit</div><div class="s">Discover the collection →</div><div class="g"><div></div><div></div><div></div><div></div></div></div></div></div>
+        <div class="body"><span class="cat">Fashion · Shopify</span><h3>Women's Fashion Boutique</h3><p>Shopify redesign with rebuilt product pages, homepage and mobile UX, plus email capture and upsell flows.</p><div class="tags"><span>Store design</span><span>Product pages</span><span>Email capture</span></div></div></article>
+      <article class="case rv"><div class="vis" style="--c1:#D7E9DF;--c2:#F3F8F4;--c3:#20372B;--c4:#C5DDCF"><div class="br"><div class="t"><i></i><i></i><i></i></div><div class="site"><div class="n"><b>GLOWSKIN</b><span>SEARCH · CART</span></div><div class="hh">Your Skin Deserves the Best</div><div class="s">Glow Serum · Face Cream · Vitamin C</div><div class="g"><div></div><div></div><div></div><div></div></div></div></div></div>
+        <div class="body"><span class="cat">Beauty · Shopify</span><h3>Skincare &amp; Beauty Brand</h3><p>Store audit plus marketing strategy for a beauty brand, with a prioritised 90-day fix roadmap.</p><div class="tags"><span>Store audit</span><span>Marketing strategy</span><span>CRO</span></div></div></article>
+      <article class="case rv"><div class="vis" style="--c1:#2B2620;--c2:#15120F;--c3:#E6CD95;--c4:#3A332A"><div class="br"><div class="t"><i></i><i></i><i></i></div><div class="site"><div class="n"><b>AURUM</b><span>COLLECTIONS · BESPOKE</span></div><div class="hh">Fine Jewellery, Crafted Forever</div><div class="s">Rings · Necklaces · Earrings</div><div class="g"><div></div><div></div><div></div><div></div></div></div></div></div>
+        <div class="body"><span class="cat">Luxury · WooCommerce</span><h3>Fine Jewellery Brand</h3><p>Custom WooCommerce build with an editorial layout, lookbook and premium product page structure.</p><div class="tags"><span>WooCommerce</span><span>Luxury design</span><span>Lookbook</span></div></div></article>
+      <article class="case rv"><div class="vis" style="--c1:#E4DDF6;--c2:#FAF8FE;--c3:#2F2651;--c4:#D9CFF1"><div class="br"><div class="t"><i></i><i></i><i></i></div><div class="site"><div class="n"><b>PAWFECT</b><span>FREE SHIPPING OVER $35</span></div><div class="hh">Everything Your Pet Loves</div><div class="s">Collars · Beds · Carriers · Toys</div><div class="g"><div></div><div></div><div></div><div></div></div></div></div></div>
+        <div class="body"><span class="cat">Dropshipping · Shopify</span><h3>Pet Supplies Store</h3><p>Audit and rebuild focused on page speed, trust signals and social proof on product pages.</p><div class="tags"><span>Speed</span><span>Trust &amp; reviews</span><span>Rebuild</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="dark">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> How we work</span><h2>A clear process, from <span class="hl">first message</span> to launch.</h2></div>
+      <p class="sub">No surprises. Scope, price and timeline are agreed in writing before any work starts.</p>
+    </div>
+    <div class="proc">
+      <div class="pstep rv"><div class="n">01</div><h3>Discover</h3><p>We talk through your goals, products, customers and current setup so we solve the right problem.</p><small><b>You get</b>A shared understanding of what you need</small></div>
+      <div class="pstep rv"><div class="n">02</div><h3>Audit &amp; Plan</h3><p>We review your store and agree on scope, deliverables, price and timeline in writing.</p><small><b>You get</b>A clear written plan and quote</small></div>
+      <div class="pstep rv"><div class="n">03</div><h3>Build &amp; Optimise</h3><p>We design, build and set everything up, keeping you updated while the work is in progress.</p><small><b>You get</b>Progress updates you can review</small></div>
+      <div class="pstep rv"><div class="n">04</div><h3>Launch &amp; Grow</h3><p>We check the result, make agreed revisions, launch, and hand over everything you need to keep growing.</p><small><b>You get</b>Final delivery with handover notes</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="wrap why">
+    <div class="why-photo rv">
+      <img src="photo_5963206128361476171_y.jpg" alt="Adeyemi Esther">
+      <div class="quote"><p>"Every store we touch should be easier to shop, easier to find, and easier to grow."</p><small>Adeyemi Esther, Founder</small></div>
+    </div>
+    <div class="rv">
+      <span class="kicker"><i></i> Why Faith Great</span>
+      <h2>A growth partner, <span class="hl">not just a designer.</span></h2>
+      <p class="sub">Faith Great Digital Studio is led by Adeyemi Esther, a computer science graduate and e-commerce specialist who helps entrepreneurs and online sellers build, tidy up and grow their stores with clean design, practical SEO and clear communication.</p>
+      <div class="why-list">
+        <div><b>Plain language</b><p>No jargon. You always understand what we're doing and why.</p></div>
+        <div><b>Agreed scope</b><p>Deliverables, timeline and price confirmed in writing first.</p></div>
+        <div><b>Honest advice</b><p>We tell you plainly what can and can't be promised.</p></div>
+        <div><b>Direct contact</b><p>You work directly with the founder from start to finish.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:#EFECE5">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="kicker"><i></i> Pricing</span>
+      <h2>Clear starting prices for <span class="hl">every stage.</span></h2>
+      <p class="sub">Indicative starting prices. Your final quote depends on scope and is confirmed in writing before work begins.</p>
+    </div>
+    <div class="prices">
+      <div class="plan rv"><div class="t">Focused Fix</div><div class="d">A specific issue or a small, clearly defined task.</div><div class="p">$50<small> from</small></div><ul><li>Small product or listing task</li><li>Basic SEO or store audit</li><li>Defined task scope</li><li>Agreed delivery timeline</li></ul><a href="#contact" class="btn btn-o" data-svc="Focused Fix (from $50)">Request This</a></div>
+      <div class="plan pop rv"><span class="badge">Most popular</span><div class="t">Store Improvement</div><div class="d">Improve an existing store or a key customer journey.</div><div class="p">$150<small> from</small></div><ul><li>Store or website improvements</li><li>Theme, layout or SEO work</li><li>Scope confirmed before start</li><li>Review against agreed requirements</li></ul><a href="#contact" class="btn btn-v" data-svc="Store Improvement (from $150)">Start Project</a></div>
+      <div class="plan rv"><div class="t">Custom Build</div><div class="d">A new store, multi-step project or complex integration.</div><div class="p">$500<small> from</small></div><ul><li>Requirements and planning</li><li>Custom scope and milestones</li><li>Platform &amp; integration review</li><li>Written quotation first</li></ul><a href="#contact" class="btn btn-o" data-svc="Custom Build (from $500)">Get a Quote</a></div>
+      <div class="plan rv"><div class="t">Growth Partner</div><div class="d">Ongoing monthly support from a dedicated team.</div><div class="p" style="font-size:30px">Custom<small> / month</small></div><ul><li>Monthly strategy call</li><li>Email campaigns &amp; flows</li><li>CRO &amp; SEO improvements</li><li>Monthly performance report</li></ul><a href="#contact" class="btn btn-o" data-svc="Growth Partner (monthly)">Let's Talk</a></div>
+    </div>
+    <p class="price-note">All prices in USD. No work begins until scope, price and timeline are agreed.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="kicker"><i></i> Client feedback</span><h2>What our <span class="hl">clients say.</span></h2></div>
+      <p class="sub">Feedback from store owners we've worked with on listings, redesigns and automation.</p>
+    </div>
+    <div class="revs">
+      <div class="rev rv"><div class="st">★★★★★</div><blockquote>"Esther did an excellent job listing my products on Etsy. She paid close attention to the product details and ensured everything was presented clearly and professionally. Communication was smooth, and I was pleased with the quality of her work. I would gladly recommend her services to anyone looking for reliable Etsy shop support!"</blockquote><div class="who"><div class="av">S</div><div><b>Seviga</b><small>Etsy Product Listings</small></div></div></div>
+      <div class="rev rv"><div class="st">★★★★★</div><blockquote>"Working with Esther was a great experience. She helped redesign my store and gave it a cleaner, more professional look. The attention to detail and overall presentation made a real difference. Communication was smooth, and I’m pleased with the work delivered. Highly recommended!"</blockquote><div class="who"><div class="av">D</div><div><b>Daniel</b><small>Store Redesign</small></div></div></div>
+      <div class="rev rv"><div class="st">★★★★★</div><blockquote>"Esther helped me automate parts of my business and made my workflow more organized and efficient. She understood what I needed and worked to create a solution that suited my business. The process was straightforward, and I appreciated her support and attention to detail. Excellent service!"</blockquote><div class="who"><div class="av">E</div><div><b>Ellis</b><small>Business Automation</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head center rv"><span class="kicker"><i></i> FAQ</span><h2>Questions, <span class="hl">answered.</span></h2></div>
+    <div class="faq rv">
+      <details><summary>What platforms do you work with?</summary><p>Mainly Shopify, plus WooCommerce, WordPress, Wix and Etsy. We also work with tools like Klaviyo, Meta Ads, Google Analytics, Zapier, Make and GoHighLevel.</p></details>
+      <details><summary>Is the store audit really free?</summary><p>Yes. The scan runs instantly on this page. To unlock the full list of issues and download the PDF report, enter your name, email and WhatsApp number, then send us the short WhatsApp message the page prepares for you.</p></details>
+      <details><summary>How much will my project cost?</summary><p>Small fixes start from $50, store improvements from $150 and custom builds from $500. Your final price is confirmed in writing after we understand the scope.</p></details>
+      <details><summary>How long does a project take?</summary><p>Small fixes can take a few days. Store improvements usually take 1–2 weeks and full builds 2–4 weeks, depending on scope and how quickly content is ready.</p></details>
+      <details><summary>Do you guarantee sales or Google rankings?</summary><p>No honest agency can. We focus on the things that are proven to help: speed, trust, clear product pages, follow-up emails and good SEO, and we're clear about what can and can't be promised.</p></details>
+      <details><summary>Can you work on my existing store?</summary><p>Yes. Most of our work is improving existing stores. We start with an audit, then agree what to change.</p></details>
+      <details><summary>How do payments work?</summary><p>Price, deliverables and timeline are agreed in writing before work starts. Payment terms are confirmed in your quote.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="dark">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="kicker"><i></i> Start a project</span>
+      <h2>Let's grow <span class="hl">your store.</span></h2>
+      <p class="sub">Tell us about your store and what you want to achieve. We reply within 24 hours with next steps.</p>
+      <div class="cmethods">
+        <a class="cm" href="https://wa.me/2348142826267?text=Hello%20Faith%20Great%20Digital%20Studio%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener"><div class="i"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></div><div><small>WhatsApp</small><b>0814 282 6267</b></div></a>
+        <a class="cm" href="mailto:faithgreat2001@gmail.com"><div class="i"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><small>Email</small><b>faithgreat2001@gmail.com</b></div></a>
+        <div class="cm"><div class="i"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Response time</small><b>Within 24 hours</b></div></div>
+      </div>
+    </div>
+    <div class="cform rv">
+      <div id="cWrap">
+        <h3>Tell us about your project</h3>
+        <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="cForm">
+          <input type="hidden" name="form-name" value="project-inquiry">
+          <p class="hidden"><label>Leave empty <input name="bot-field"></label></p>
+          <div class="row"><div class="f"><label>Your name</label><input name="name" required></div><div class="f"><label>Email</label><input name="email" type="email" required></div></div>
+          <div class="row"><div class="f"><label>WhatsApp number</label><input name="whatsapp"></div><div class="f"><label>Store / website URL</label><input name="store-url"></div></div>
+          <div class="row">
+            <div class="f"><label>Service</label><select name="service" id="cSvc"><option value="">Choose a service</option><option>Shopify Store Design &amp; Development</option><option>Conversion Optimisation</option><option>Email &amp; SMS Marketing</option><option>SEO &amp; AI Search</option><option>Paid Ads</option><option>Analytics &amp; Tracking</option><option>Automation</option><option>Product Research &amp; Dropshipping</option><option>Focused Fix (from $50)</option><option>Store Improvement (from $150)</option><option>Custom Build (from $500)</option><option>Growth Partner (monthly)</option></select></div>
+            <div class="f"><label>Budget</label><select name="budget"><option value="">Select a range</option><option>Under $150</option><option>$150 – $500</option><option>$500 – $1,500</option><option>$1,500+</option><option>Not sure yet</option></select></div>
+          </div>
+          <div class="f"><label>What do you want to achieve?</label><textarea name="message" required></textarea></div>
+          <button class="btn btn-v" type="submit" style="width:100%">Send Project Inquiry →</button>
+        </form>
+      </div>
+      <div class="ok" id="cOk"><div class="tk">✓</div><h3>Inquiry received!</h3><p style="color:var(--muted);margin-top:8px">Thank you. We'll reply within 24 hours. For a faster answer, <a href="https://wa.me/2348142826267" style="color:var(--v);font-weight:600">message us on WhatsApp</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><a href="#top" class="logo"><b>FG</b><div>Faith Great<small>Digital Studio</small></div></a><p>E-commerce growth agency for Shopify and online brands. Design, conversion, email, SEO, ads and automation.</p>
+        <div class="soc">
+          <a href="https://wa.me/2348142826267" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+          <a href="mailto:faithgreat2001@gmail.com" aria-label="Email"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          <a href="https://www.tiktok.com/@ade_esther12" target="_blank" rel="noopener" aria-label="TikTok"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9a6.3 6.3 0 1 0 5.4 6.2V8.6a7.9 7.9 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8Z"/></svg></a>
+        </div></div>
+      <div><h4>Services</h4><ul><li><a href="#services">Store Design</a></li><li><a href="#services">Conversion Optimisation</a></li><li><a href="#services">Email &amp; SMS</a></li><li><a href="#services">SEO &amp; AI Search</a></li><li><a href="#services">Paid Ads</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Get started</h4><ul><li><a href="#audit">Free Store Audit</a></li><li><a href="#contact">Start a Project</a></li><li><a href="https://wa.me/2348142826267" target="_blank" rel="noopener">WhatsApp Us</a></li><li><a href="mailto:faithgreat2001@gmail.com">Email Us</a></li></ul></div>
+    </div>
+    <div class="fb"><span>© <span id="yr"></span> Faith Great Digital Studio. All rights reserved.</span><span>Founded by Adeyemi Esther</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/2348142826267?text=Hello%20Faith%20Great%20Digital%20Studio%2C%20I%E2%80%99m%20interested%20in%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>Chat with us</span></a>
+
+<div id="printArea"></div>
+
+<script>
+var SITE={ whatsapp:'2348142826267', email:'faithgreat2001@gmail.com', psiKey:'' /* optional Google API key for higher audit limits */ };
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+document.querySelectorAll('[data-svc]').forEach(function(b){b.addEventListener('click',function(){document.getElementById('cSvc').value=b.dataset.svc})});
+
+function postNetlify(form){
+  return fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()}).then(function(r){if(!r.ok)throw new Error('form');});
+}
+
+/* contact form */
+document.getElementById('cForm').addEventListener('submit',function(e){
+  e.preventDefault();var f=this;
+  postNetlify(f).catch(function(){
+    var d=new FormData(f),t=[];d.forEach(function(v,k){if(k!=='form-name'&&k!=='bot-field'&&v)t.push(k+': '+v)});
+    window.open('mailto:'+SITE.email+'?subject='+encodeURIComponent('New project inquiry')+'&body='+encodeURIComponent(t.join('\n')));
+  }).finally(function(){document.getElementById('cWrap').style.display='none';document.getElementById('cOk').style.display='block'});
+});
+
+/* ===== Free Store Audit ===== */
+var REPORT=null;
+function normUrl(u){u=(u||'').trim();if(!u)return '';if(!/^https?:\/\//i.test(u))u='https://'+u;try{return new URL(u).href}catch(e){return ''}}
+function col(s){return s>=90?'#21C08B':s>=50?'#F4B740':'#EF4F4F'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function clean(s){return String(s||'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/`/g,'')}
+var PLAIN={
+ 'render-blocking-resources':'Some files block your page from showing quickly. Defer non-essential scripts and styles.',
+ 'uses-optimized-images':'Images are larger than needed. Compress them to load faster.',
+ 'modern-image-formats':'Serve images in WebP or AVIF so they load faster on phones.',
+ 'uses-responsive-images':'Images are bigger than the screen needs. Serve correctly sized images.',
+ 'offscreen-images':'Images below the fold load straight away. Lazy-load them.',
+ 'unused-javascript':'Unused JavaScript (often old apps) slows your store. Remove unused apps and scripts.',
+ 'unused-css-rules':'Unused CSS makes pages heavier. Trim theme and app styles.',
+ 'unminified-javascript':'JavaScript files are not minified.',
+ 'unminified-css':'CSS files are not minified.',
+ 'server-response-time':'Your server responds slowly. Reduce apps, redirects and heavy theme code.',
+ 'redirects':'Extra redirects add delay before the page loads.',
+ 'uses-text-compression':'Turn on text compression so files download faster.',
+ 'total-byte-weight':'The page is very heavy. Reduce image, video and script size.',
+ 'dom-size':'The page has too many elements, which slows phones down.',
+ 'third-party-summary':'Third-party apps and widgets slow down your store.',
+ 'largest-contentful-paint-element':'Your main image or heading appears late. Optimise the hero section.',
+ 'layout-shift-elements':'Things move around while loading, which frustrates shoppers.',
+ 'meta-description':'Pages are missing a meta description, so Google shows random text.',
+ 'document-title':'The page is missing a proper title for Google.',
+ 'image-alt':'Images are missing alt text, which hurts SEO and accessibility.',
+ 'link-text':'Some links say things like "click here", which hurts SEO.',
+ 'is-crawlable':'Search engines may be blocked from indexing this page.',
+ 'robots-txt':'Your robots.txt file has problems.',
+ 'hreflang':'Language tags are set up incorrectly.',
+ 'canonical':'The canonical tag is missing or invalid.',
+ 'http-status-code':'The page returns an error status code.',
+ 'crawlable-anchors':'Some links can\'t be followed by search engines.',
+ 'tap-targets':'Buttons and links are too small or close together on mobile.',
+ 'font-size':'Text is too small to read comfortably on mobile.',
+ 'viewport':'The page is not set up properly for mobile screens.',
+ 'color-contrast':'Some text is hard to read because of low colour contrast.',
+ 'errors-in-console':'The page shows errors in the browser console.',
+ 'uses-http2':'Your server isn\'t using HTTP/2.'
+};
+
+function startScan(url){
+  var strategy=document.querySelector('input[name=strategy]:checked').value;
+  var err=document.getElementById('err'),st=document.getElementById('status'),fill=document.getElementById('barFill'),txt=document.getElementById('statusText');
+  err.style.display='none';document.getElementById('report').style.display='none';
+  st.classList.add('on');var p=5;fill.style.width='5%';
+  var msgs=['Loading your store…','Testing speed on '+strategy+'…','Checking SEO basics…','Checking mobile usability…','Looking for quick wins…','Almost there…'];
+  var mi=0;var tick=setInterval(function(){p=Math.min(p+Math.random()*6,92);fill.style.width=p+'%';if(Math.random()<.3&&mi<msgs.length-1){mi++;txt.textContent=msgs[mi]}},900);
+  txt.textContent=msgs[0];
+  var api='https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url='+encodeURIComponent(url)+'&strategy='+strategy+'&category=performance&category=seo&category=accessibility&category=best-practices'+(SITE.psiKey?'&key='+SITE.psiKey:'');
+  document.getElementById('scanBtn').disabled=true;
+  fetch(api).then(function(r){return r.json()}).then(function(d){
+    clearInterval(tick);fill.style.width='100%';
+    if(d.error||!d.lighthouseResult)throw new Error(d.error&&d.error.message||'scan');
+    build(d.lighthouseResult,url,strategy);
+  }).catch(function(e){
+    clearInterval(tick);
+    err.innerHTML='We couldn\'t scan that store right now. Check the link is correct and public, then try again in a minute. If it keeps failing, <a href="https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent('Hello, I tried the free audit for '+url+' but it did not load. Can you audit my store?')+'" target="_blank" rel="noopener">message us on WhatsApp</a> and we\'ll audit it manually.';
+    err.style.display='block';
+  }).finally(function(){st.classList.remove('on');document.getElementById('scanBtn').disabled=false});
+}
+
+function build(lh,url,strategy){
+  var c=lh.categories,a=lh.audits;
+  var cats=[['performance','Speed'],['seo','SEO'],['accessibility','Accessibility'],['best-practices','Best Practices']];
+  var scores={};
+  document.getElementById('rings').innerHTML=cats.map(function(k){var s=Math.round((c[k[0]]&&c[k[0]].score||0)*100);scores[k[1]]=s;
+    return '<div class="ring-c"><div class="ring" style="--p:'+s+';--c:'+col(s)+'"><b>'+s+'</b></div><span>'+k[1]+'</span></div>'}).join('');
+  var mets=[['first-contentful-paint','First paint'],['largest-contentful-paint','Main content'],['total-blocking-time','Blocking time'],['cumulative-layout-shift','Layout shift'],['speed-index','Speed index']];
+  var metricText=[];
+  document.getElementById('metrics').innerHTML=mets.map(function(m){var x=a[m[0]];if(!x)return '';var s=Math.round((x.score||0)*100);metricText.push(m[1]+': '+x.displayValue);
+    return '<div class="metric"><small><i style="background:'+col(s)+'"></i>'+m[1]+'</small><b>'+esc(x.displayValue||'-')+'</b></div>'}).join('');
+  // issues
+  var list=[];
+  Object.keys(a).forEach(function(id){var x=a[id];
+    if(x.score===null||x.score===undefined||x.score>=0.9)return;
+    if(['manual','notApplicable','informative'].indexOf(x.scoreDisplayMode)>-1)return;
+    var inPerf=c.performance&&c.performance.auditRefs.some(function(r){return r.id===id&&r.weight>0||r.id===id&&r.group==='load-opportunities'||r.id===id&&r.group==='diagnostics'});
+    var inSeo=c.seo&&c.seo.auditRefs.some(function(r){return r.id===id});
+    var inA11y=c.accessibility&&c.accessibility.auditRefs.some(function(r){return r.id===id&&r.weight>=3});
+    if(!(inPerf||inSeo||inA11y||PLAIN[id]))return;
+    var save=(x.details&&x.details.overallSavingsMs)||0;
+    var sev=x.score<0.5?'high':'med';if(save>1000)sev='high';
+    list.push({id:id,title:clean(x.title),fix:PLAIN[id]||clean(x.description).split('. ')[0]+'.',sev:sev,area:inSeo?'SEO':inPerf?'Speed':'Usability',w:(sev==='high'?2:1)*1000+save+(PLAIN[id]?500:0)});
+  });
+  list.sort(function(x,y){return y.w-x.w});list=list.slice(0,12);
+  if(!list.length)list=[{title:'No major technical issues found',fix:'Your technical basics look solid. The next wins are usually in product pages, offers and email flows.',sev:'low',area:'Overview'}];
+  document.getElementById('issues').innerHTML='<h4>What to fix first</h4>'+list.map(function(i){return '<div class="issue"><span class="sev '+i.sev+'">'+(i.sev==='high'?'High':i.sev==='med'?'Medium':'Good')+'</span><div><b>'+esc(i.title)+' <span style="font-weight:500;color:#8C8FAE;font-size:12.5px">· '+i.area+'</span></b><p>'+esc(i.fix)+'</p></div></div>'}).join('');
+  document.getElementById('issueCount').textContent=list.length+(list.length===1?' issue':' issues');
+  var avg=Math.round((scores.Speed+scores.SEO+scores.Accessibility+scores['Best Practices'])/4);
+  var v=document.getElementById('verdict');
+  v.textContent=avg>=90?'Excellent foundation':avg>=70?'Good, with room to grow':avg>=50?'Needs attention':'Losing sales: urgent fixes';
+  v.style.background=col(avg)+'22';v.style.color=col(avg);
+  var host=url.replace(/^https?:\/\//,'').replace(/\/$/,'');
+  document.getElementById('repSite').textContent=host;
+  document.getElementById('repMeta').textContent=(strategy==='mobile'?'Mobile':'Desktop')+' test · '+new Date().toLocaleString();
+  REPORT={url:url,host:host,strategy:strategy,scores:scores,metrics:metricText,issues:list,verdict:v.textContent,date:new Date().toLocaleString()};
+  document.getElementById('g-url').value=url;document.getElementById('g-dev').value=strategy;
+  document.getElementById('g-scores').value=Object.keys(scores).map(function(k){return k+' '+scores[k]}).join(', ');
+  document.getElementById('g-issues').value=list.map(function(i){return '['+i.sev+'] '+i.title}).join(' | ');
+  UNLOCKED=false;LEAD=null;
+  document.getElementById('report').style.display='block';
+  document.getElementById('lockWrap').classList.add('locked');document.getElementById('gate').style.display='flex';document.getElementById('unlockedBar').style.display='none';
+  document.getElementById('gs1').classList.add('on');document.getElementById('gs2').classList.remove('on');document.getElementById('waWait').style.display='none';
+  document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function waText(name){
+  var r=REPORT;return 'Hello Faith Great Digital Studio, I'+(name?' am '+name+' and I':'')+' just ran the Free Store Audit.\n\nStore: '+r.url+'\nTest: '+r.strategy+'\nScores: '+Object.keys(r.scores).map(function(k){return k+' '+r.scores[k]}).join(', ')+'\n\nTop issues:\n'+r.issues.slice(0,5).map(function(i,n){return (n+1)+'. '+i.title}).join('\n')+'\n\nI would like help fixing these.';
+}
+function unlock(){
+  document.getElementById('lockWrap').classList.remove('locked');
+  document.getElementById('gate').style.display='none';
+  document.getElementById('unlockedBar').style.display='flex';
+  document.getElementById('waBtn').href='https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(waText(''));
+}
+var UNLOCKED=false,LEAD=null;
+document.getElementById('gateForm').addEventListener('submit',function(e){
+  e.preventDefault();var f=this;
+  LEAD={name:f.name.value,email:f.email.value,whatsapp:f.whatsapp.value};
+  var b=f.querySelector('button');b.disabled=true;b.textContent='Saving…';
+  postNetlify(f).catch(function(){}).finally(function(){
+    b.disabled=false;b.textContent='Continue →';
+    document.getElementById('gs1').classList.remove('on');document.getElementById('gs2').classList.add('on');
+  });
+});
+document.getElementById('waUnlock').addEventListener('click',function(){
+  if(!REPORT||!LEAD)return;
+  var msg=waText(LEAD.name)+'\nEmail: '+LEAD.email+'\nWhatsApp: '+LEAD.whatsapp;
+  window.open('https://wa.me/'+SITE.whatsapp+'?text='+encodeURIComponent(msg),'_blank');
+  document.getElementById('waWait').style.display='block';
+  var t0=Date.now(),done=false;
+  function finish(){if(done)return;done=true;UNLOCKED=true;unlock();document.removeEventListener('visibilitychange',vis);window.removeEventListener('focus',foc)}
+  function vis(){if(document.visibilityState==='visible'&&Date.now()-t0>3000)finish()}
+  function foc(){if(Date.now()-t0>3000)finish()}
+  document.addEventListener('visibilitychange',vis);window.addEventListener('focus',foc);
+  setTimeout(finish,15000);
+});
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var r=REPORT;if(!r||!UNLOCKED)return;
+  var c=function(s){return s>=90?'#1a9e6f':s>=50?'#c98a10':'#d23c3c'};
+  document.getElementById('printArea').innerHTML='<div style="font-family:Inter,Arial,sans-serif;max-width:760px;margin:0 auto">'+
+   '<div style="display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #6D4AFF;padding-bottom:14px"><div><div style="font:700 22px Sora,Arial">Faith Great Digital Studio</div><div style="color:#666;font-size:12px">E-commerce Growth Agency · wa.me/'+SITE.whatsapp+' · '+SITE.email+'</div></div><div style="text-align:right;font-size:12px;color:#666">Store Audit Report<br>'+esc(r.date)+'</div></div>'+
+   '<h1 style="font:700 26px Sora,Arial;margin:22px 0 4px">'+esc(r.host)+'</h1><div style="color:#555;font-size:13px">'+(r.strategy==='mobile'?'Mobile':'Desktop')+' test · Verdict: <b>'+esc(r.verdict)+'</b></div>'+
+   '<div style="display:flex;gap:12px;margin:20px 0">'+Object.keys(r.scores).map(function(k){return '<div style="flex:1;border:1px solid #ddd;border-radius:12px;padding:14px;text-align:center"><div style="font:800 30px Sora,Arial;color:'+c(r.scores[k])+'">'+r.scores[k]+'</div><div style="font-size:12px;color:#444">'+k+'</div></div>'}).join('')+'</div>'+
+   '<h3 style="font:700 16px Sora,Arial;margin:18px 0 8px">Key speed measures</h3><div style="font-size:13px;color:#333">'+r.metrics.map(esc).join(' · ')+'</div>'+
+   '<h3 style="font:700 16px Sora,Arial;margin:22px 0 8px">What to fix first</h3>'+r.issues.map(function(i,n){return '<div style="border:1px solid #e3e3e3;border-radius:10px;padding:10px 12px;margin-bottom:8px;page-break-inside:avoid"><b style="font-size:14px">'+(n+1)+'. '+esc(i.title)+'</b> <span style="font-size:11px;color:#777">('+(i.sev==='high'?'High':i.sev==='med'?'Medium':'Good')+' · '+i.area+')</span><div style="font-size:13px;color:#444;margin-top:3px">'+esc(i.fix)+'</div></div>'}).join('')+
+   '<div style="margin-top:22px;background:#F3F0FF;border-radius:12px;padding:16px;font-size:13.5px"><b>Want these fixed?</b> Faith Great Digital Studio can fix these issues for you. WhatsApp: +'+SITE.whatsapp+' · Email: '+SITE.email+'</div>'+
+   '<p style="font-size:11px;color:#888;margin-top:14px">Scores come from a single automated Google Lighthouse test and can vary between runs. They measure technical quality, not sales.</p></div>';
+  document.body.classList.add('printing');window.print();setTimeout(function(){document.body.classList.remove('printing')},500);
+});
+document.getElementById('scanForm').addEventListener('submit',function(e){e.preventDefault();var u=normUrl(document.getElementById('scanUrl').value);if(!u){document.getElementById('scanUrl').focus();return}startScan(u)});
+document.getElementById('heroAudit').addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('heroUrl').value;document.getElementById('scanUrl').value=v;document.getElementById('audit').scrollIntoView({behavior:'smooth'});var u=normUrl(v);if(u)setTimeout(function(){startScan(u)},500)});
+</script>
+</body>
+</html>
