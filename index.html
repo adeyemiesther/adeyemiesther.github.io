@@ -55,7 +55,7 @@ h2 .hl{color:var(--v)}
 nav{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-d)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .logo{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:-.02em}
-.logo b{width:38px;height:38px;border-radius:11px;background:var(--v);display:grid;place-items:center;font-size:15px;color:#fff}
+.logo .lg{flex-shrink:0;display:block}
 .logo small{display:block;font-size:10.5px;font-weight:500;letter-spacing:.14em;color:var(--muted-d);text-transform:uppercase;margin-top:1px}
 .links{display:flex;gap:30px;align-items:center}
 .links a{color:#C7C7C7;font-size:14.5px;font-weight:500;transition:.2s}.links a:hover{color:#fff}
@@ -159,16 +159,16 @@ nav{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.92);backdrop-filt
 .metric small{display:block;font-size:12px;color:var(--muted-d)}
 .metric b{font-family:var(--h);color:#fff;font-size:20px}
 .metric i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
-.locked{position:relative;min-height:500px}
-.locked .issues{filter:blur(6px);pointer-events:none;user-select:none;max-height:360px;overflow:hidden}
+.locked{position:relative}
+
 .issues h4{font-size:18px;margin-bottom:14px}
 .issue{display:flex;gap:14px;padding:16px;border:1px solid var(--line-d);border-radius:14px;margin-bottom:10px;background:rgba(255,255,255,.02)}
 .issue .sev{flex-shrink:0;font-size:11px;font-weight:700;letter-spacing:.05em;padding:4px 8px;border-radius:6px;height:fit-content;text-transform:uppercase}
 .sev.high{background:rgba(239,79,79,.16);color:#FF8A8A}.sev.med{background:rgba(244,183,64,.16);color:#F7CB72}.sev.low{background:rgba(33,192,139,.14);color:#5FE0B2}
 .issue b{color:#fff;font-size:15px;display:block}
 .issue p{font-size:14px;color:var(--muted-d);margin-top:3px}
-.gate{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;padding-top:20px;background:linear-gradient(180deg,rgba(20,20,20,.4),rgba(20,20,20,.95) 40%)}
-.gate-card{background:#fff;color:var(--text);border-radius:22px;padding:30px;width:min(560px,100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.gate{display:flex;justify-content:center;margin-top:22px}
+.gate-card{background:#fff;color:var(--text);border-radius:22px;padding:30px;width:min(640px,100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
 .gate-card h3{font-size:22px;color:var(--ink)}
 .gate-card p{font-size:14.5px;color:var(--muted);margin:6px 0 18px}
 .gate-card .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -374,7 +374,7 @@ body.printing #printArea{display:block}
 
 <nav>
   <div class="wrap nav">
-    <a href="#top" class="logo"><b>FG</b><div>Faith Great<small>Digital Studio</small></div></a>
+    <a href="#top" class="logo"><svg class="lg" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#2450FF"/><path d="M12 15.5h16l-1.3 13.2a2 2 0 0 1-2 1.8H15.3a2 2 0 0 1-2-1.8z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 15.5v-1.8a4 4 0 0 1 8 0v1.8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16.5 25.5l3.2-3.2 2 2 3.3-3.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="3" fill="#fff"/></svg><div>Faith Great<small>Digital Studio</small></div></a>
     <div class="links" id="links">
       <a href="#brands">Clients</a>
       <a href="#gaps">Why Stores Struggle</a>
@@ -480,10 +480,10 @@ body.printing #printArea{display:block}
     <div class="head center rv">
       <span class="kicker"><i></i> Free store audit tool</span>
       <h2>How healthy is <span class="hl">your store?</span></h2>
-      <p class="sub">Enter your store link and we'll check its SEO, speed, trust, conversion and products. You'll see your scores instantly. Unlock and download the full report by sending us your details.</p>
+      <p class="sub">Enter your store link and we'll check its SEO, speed, trust, conversion and products. You'll see your scores and every issue instantly, free. To download the PDF report, just send us a quick message.</p>
     </div>
     <div class="audit-box rv">
-      <div class="steps-mini"><div><b>1</b> Enter your store link</div><div><b>2</b> See your scores</div><div><b>3</b> Send your details to unlock</div><div><b>4</b> Download your full report</div></div>
+      <div class="steps-mini"><div><b>1</b> Enter your store link</div><div><b>2</b> See your scores</div><div><b>3</b> See every issue &amp; fix</div><div><b>4</b> Message us to download the PDF</div></div>
       <form class="scan-form" id="scanForm">
         <input class="inp" id="scanUrl" type="text" placeholder="https://yourstore.com" required aria-label="Store URL">
         <div class="seg"><label><input type="radio" name="strategy" value="mobile" checked><span>📱 Mobile</span></label><label><input type="radio" name="strategy" value="desktop"><span>💻 Desktop</span></label></div>
@@ -505,8 +505,8 @@ body.printing #printArea{display:block}
           <div class="gate" id="gate">
             <div class="gate-card">
               <div class="gate-step on" id="gs1">
-              <h3>🔒 Unlock your full report</h3>
-              <p>We found <b id="issueCount">several issues</b> on your store. <b>Step 1 of 2:</b> enter your details. <b>Step 2:</b> send us a quick WhatsApp message to unlock every finding and download your PDF report.</p>
+              <h3>📄 Download your full PDF report</h3>
+              <p>We found <b id="issueCount">several issues</b> on your store (listed above). To download your branded PDF report: <b>Step 1:</b> enter your details. <b>Step 2:</b> send us a quick message on WhatsApp or TikTok.</p>
               <form name="audit-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="gateForm">
                 <input type="hidden" name="form-name" value="audit-lead">
                 <input type="hidden" name="store-url" id="g-url">
@@ -524,9 +524,9 @@ body.printing #printArea{display:block}
               <div class="gate-step wa-step" id="gs2">
                 <div class="big"><svg width="34" height="34" fill="#fff" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></div>
                 <h3>Step 2 of 2: Send us your result</h3>
-                <p>Message us on WhatsApp or TikTok. Your audit result is added to the message automatically. <b>Press send</b>, then come back here. Your full report and download unlock automatically.</p>
-                <button class="btn" type="button" id="waUnlock" style="width:100%">Send on WhatsApp to Unlock →</button>
-                <button class="btn btn-ink-tt" type="button" id="ttUnlock" style="width:100%;margin-top:10px">Send on TikTok to Unlock →</button>
+                <p>Message us on WhatsApp or TikTok. Your audit result is added to the message automatically. <b>Press send</b>, then come back here and your download will be ready.</p>
+                <button class="btn" type="button" id="waUnlock" style="width:100%">Send on WhatsApp &amp; Download →</button>
+                <button class="btn btn-ink-tt" type="button" id="ttUnlock" style="width:100%;margin-top:10px">Send on TikTok &amp; Download →</button>
                 <p class="wa-wait" id="ttNote">✅ Your audit result is copied. Paste it in a TikTok message to <b>@ade_esther12</b> and press send.</p>
                 <p class="wa-wait" id="waWait">Waiting for you to send the message… Come back to this page after sending.</p>
               </div>
@@ -535,7 +535,7 @@ body.printing #printArea{display:block}
         </div>
 
         <div class="unlocked-bar" id="unlockedBar">
-          <div><h4>✅ Report unlocked. Thank you!</h4><p>Download your report, or chat with us on WhatsApp to get these issues fixed.</p></div>
+          <div><h4>✅ Thank you! Your report is ready.</h4><p>Download your PDF report, or chat with us to get these issues fixed.</p></div>
           <div class="btns"><button class="btn btn-w" id="dlBtn" type="button">⬇ Download PDF Report</button><a class="btn btn-c" id="waBtn" target="_blank" rel="noopener">Get These Fixed →</a></div>
         </div>
         <p class="rep-note">Scores come from an automated check of your store's public pages and can vary between runs. They highlight opportunities; they don't measure sales.</p>
@@ -661,7 +661,7 @@ body.printing #printArea{display:block}
     <div class="head center rv"><span class="kicker"><i></i> FAQ</span><h2>Questions, <span class="hl">answered.</span></h2></div>
     <div class="faq rv">
       <details><summary>What platforms do you work with?</summary><p>Mainly Shopify, plus WooCommerce, WordPress, Wix and Etsy. We also work with tools like Klaviyo, Meta Ads, Google Analytics, Zapier, Make and GoHighLevel.</p></details>
-      <details><summary>Is the store audit really free?</summary><p>Yes. The scan runs instantly on this page. To unlock the full list of issues and download the PDF report, enter your name, email and WhatsApp number, then send us the short WhatsApp message the page prepares for you.</p></details>
+      <details><summary>Is the store audit really free?</summary><p>Yes. The scan runs on this page and you see every score and issue for free. To download the PDF report, enter your details and send us the short WhatsApp or TikTok message the page prepares for you.</p></details>
       <details><summary>How much will my project cost?</summary><p>Small fixes start from $50, store improvements from $150 and custom builds from $500. Your final price is confirmed in writing after we understand the scope.</p></details>
       <details><summary>How long does a project take?</summary><p>Small fixes can take a few days. Store improvements usually take 1–2 weeks and full builds 2–4 weeks, depending on scope and how quickly content is ready.</p></details>
       <details><summary>Do you guarantee sales or Google rankings?</summary><p>No honest agency can. We focus on the things that are proven to help: speed, trust, clear product pages, follow-up emails and good SEO, and we're clear about what can and can't be promised.</p></details>
@@ -710,7 +710,7 @@ body.printing #printArea{display:block}
 <footer>
   <div class="wrap">
     <div class="ft">
-      <div><a href="#top" class="logo"><b>FG</b><div>Faith Great<small>Digital Studio</small></div></a><p>E-commerce growth agency for Shopify and online brands. Design, conversion, email, SEO, ads and automation.</p>
+      <div><a href="#top" class="logo"><svg class="lg" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#2450FF"/><path d="M12 15.5h16l-1.3 13.2a2 2 0 0 1-2 1.8H15.3a2 2 0 0 1-2-1.8z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 15.5v-1.8a4 4 0 0 1 8 0v1.8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16.5 25.5l3.2-3.2 2 2 3.3-3.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="3" fill="#fff"/></svg><div>Faith Great<small>Digital Studio</small></div></a><p>E-commerce growth agency for Shopify and online brands. Design, conversion, email, SEO, ads and automation.</p>
         <div class="soc">
           <a href="https://wa.me/2348142826267" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
           <a href="mailto:faithgreat2001@gmail.com" aria-label="Email"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
